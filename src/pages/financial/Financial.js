@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AnimatedContentMemo } from '../../components/Animated-Content';
+import { FooterMemo } from '../../components/Footer';
 import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';
 import software from '../../images/software.json';
@@ -63,6 +64,8 @@ const Financial = () => {
         iconWidth={'650px'}
         iconHeight={'650px'}
       ></AnimatedContentMemo>
+
+      <FooterMemo></FooterMemo>
     </Container>
   );
 };

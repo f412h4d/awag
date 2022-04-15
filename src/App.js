@@ -16,6 +16,7 @@ function App() {
 
   const Main = styled.main`
     height: calc(100vh - 95px);
+    overflow-x: hidden;
   `;
 
   const RouterPages = (

@@ -11,7 +11,8 @@ export default class Navbar extends Component {
     return (
       <nav className='nav' id='navbar'>
         <div className='nav-content'>
-          <img src={logo} className='nav-logo' alt='Logo' onClick={this.scrollToTop} />
+          <img src={logo} className='nav-logo' alt='Logo' />
+
           <ul className='nav-items'>
             <li className='nav-item'>
               <Link
@@ -49,19 +50,6 @@ export default class Navbar extends Component {
                 duration={700}
               >
                 Marketing
-              </Link>
-            </li>
-
-            <li className='nav-item'>
-              <Link
-                activeClass='active'
-                to='financial-services'
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={700}
-              >
-                Financial Services
               </Link>
             </li>
           </ul>

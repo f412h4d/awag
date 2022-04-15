@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { animateScroll as scroll, Link } from 'react-scroll';
-import logo from './images/awag-typo.jpeg';
+import logo from './images/awag-logo-1.png';
 
 export default class Navbar extends Component {
   scrollToTop = () => {

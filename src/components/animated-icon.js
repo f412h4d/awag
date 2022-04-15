@@ -43,4 +43,4 @@ const LottieIcon = styled.div`
   justify-content: center;
 `;
 
-export const MemoAnimatedIcon = React.memo(AnimatedIcon);
+export const AnimatedIconMemo = React.memo(AnimatedIcon);

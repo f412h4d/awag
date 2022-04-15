@@ -6,7 +6,7 @@ html body {
 }
 
 :root {
-  --off-white: #fafafa;
+  --off-white: #c1f7e8;
 }
 
 .nav-content {
@@ -25,8 +25,8 @@ html body {
 }
 
 .nav-logo {
-  height: 56px;
-  width: 240px;
+  height: 75px;
+  width: 305px;
 }
 
 .nav-logo:hover {

@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 import Navbar from './Navbar';
-import { FinancialMemo } from './pages/Financial';
+import { FinancialMemo } from './pages/financial/Financial';
 import { InsuranceMemo } from './pages/Insurance';
 import { InvestmentMemo } from './pages/Investment';
 import { MarketingMemo } from './pages/Marketing';

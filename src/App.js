@@ -8,6 +8,7 @@ import { FinancialMemo } from "./pages/financial/Financial";
 import { InsuranceMemo } from "./pages/Insurance";
 import { InvestmentMemo } from "./pages/Investment";
 import { MarketingMemo } from "./pages/Marketing";
+import Register from "./pages/register";
 
 function App() {
   const Wrapper = styled.div`
@@ -41,6 +42,8 @@ function App() {
           <Route path="/investment" element={<InvestmentMemo />} />
 
           <Route path="/contact" element={<ContactUs />} />
+
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Main>
     </Wrapper>

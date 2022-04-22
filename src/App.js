@@ -1,14 +1,14 @@
-import React from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
-import "./App.css";
-import Navbar from "./Navbar";
-import ContactUs from "./pages/contactus";
-import { FinancialMemo } from "./pages/financial/Financial";
-import { InsuranceMemo } from "./pages/Insurance";
-import { InvestmentMemo } from "./pages/Investment";
-import { MarketingMemo } from "./pages/Marketing";
-import Register from "./pages/register";
+import { default as React, default as React } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import styled from 'styled-components';
+import './App.css';
+import Navbar from './Navbar';
+import ContactUs from './pages/contactus';
+import { FinancialMemo } from './pages/financial/Financial';
+import { InsuranceMemo } from './pages/Insurance';
+import { InvestmentMemo } from './pages/Investment';
+import { MarketingMemo } from './pages/Marketing';
+import Register from './pages/register';
 
 function App() {
   const Wrapper = styled.div`
@@ -27,23 +27,21 @@ function App() {
 
       <Main>
         <Routes>
-          <Route
-            exact
-            path="/"
-            element={<Navigate replace to="/financial" />}
-          />
+          <Route exact path='/' element={<Navigate replace to='/financial' />} />
 
-          <Route path="financial" element={<FinancialMemo />} />
+          <Route path='/blog' element={<BlogMemo />} />
 
-          <Route path="/marketing" element={<MarketingMemo />} />
+          <Route path='/financial' element={<FinancialMemo />} />
 
-          <Route path="/insurance" element={<InsuranceMemo />} />
+          <Route path='/marketing' element={<MarketingMemo />} />
 
-          <Route path="/investment" element={<InvestmentMemo />} />
+          <Route path='/insurance' element={<InsuranceMemo />} />
 
-          <Route path="/contact" element={<ContactUs />} />
+          <Route path='/investment' element={<InvestmentMemo />} />
 
-          <Route path="/register" element={<Register />} />
+          <Route path='/contact' element={<ContactUs />} />
+
+          <Route path='/register' element={<Register />} />
         </Routes>
       </Main>
     </Wrapper>

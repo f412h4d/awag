@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { animateScroll as scroll, Link } from "react-scroll";
-import logo from "./images/awag-logo-1.png";
+import React, { Component } from 'react';
+import { animateScroll as scroll, Link } from 'react-scroll';
+import logo from './images/awag-logo-1.png';
 
 export default class Navbar extends Component {
   scrollToTop = () => {
@@ -9,15 +9,15 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <nav className="nav" id="navbar">
-        <div className="nav-content">
-          <img src={logo} className="nav-logo" alt="Logo" />
+      <nav className='nav' id='navbar'>
+        <div className='nav-content'>
+          <img src={logo} className='nav-logo' alt='Logo' />
 
-          <ul className="nav-items">
-            <li className="nav-item">
+          <ul className='nav-items'>
+            <li className='nav-item'>
               <Link
-                activeClass="active"
-                to="investment"
+                activeClass='active'
+                to='investment'
                 spy={true}
                 smooth={true}
                 offset={-110}
@@ -26,10 +26,10 @@ export default class Navbar extends Component {
                 Investment
               </Link>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <Link
-                activeClass="active"
-                to="insurance"
+                activeClass='active'
+                to='insurance'
                 spy={true}
                 smooth={true}
                 offset={-50}
@@ -38,10 +38,10 @@ export default class Navbar extends Component {
                 Insurance
               </Link>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <Link
-                activeClass="active"
-                to="marketing"
+                activeClass='active'
+                to='marketing'
                 spy={true}
                 smooth={true}
                 offset={-70}
@@ -50,16 +50,29 @@ export default class Navbar extends Component {
                 Marketing
               </Link>
             </li>
-            <li className="nav-item">
+            <li className='nav-item'>
               <Link
-                activeClass="active"
-                to="contact"
+                activeClass='active'
+                to='contact'
                 spy={true}
                 smooth={true}
                 offset={-70}
                 duration={700}
               >
                 Contact us
+              </Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link
+                activeClass='active'
+                to='contact'
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={700}
+              >
+                Login
               </Link>
             </li>
           </ul>

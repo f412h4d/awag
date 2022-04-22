@@ -11,7 +11,7 @@ const Service = ({ image, title, description }) => {
     justify-content: center;
 
     width: 100%;
-    heigth: 100%;
+    height: 100%;
     min-height: 490px;
     max-height: 490px;
     border-radius: 0.4rem;

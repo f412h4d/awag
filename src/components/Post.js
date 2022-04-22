@@ -3,7 +3,7 @@ import './Post.css';
 
 const Post = () => {
   return (
-    <main class='container'>
+    <main class='post container'>
       <header class='header'>
         <p class='subheading'>Subheading for the Page</p>
         <h1 class='heading'>Main Header of the Page</h1>

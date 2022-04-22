@@ -1,8 +1,9 @@
-import { default as React, default as React } from 'react';
+import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 import Navbar from './Navbar';
+import { BlogMemo } from './pages/blog/Blog';
 import ContactUs from './pages/contactus';
 import { FinancialMemo } from './pages/financial/Financial';
 import { InsuranceMemo } from './pages/Insurance';

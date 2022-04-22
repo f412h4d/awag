@@ -15,7 +15,7 @@ const FinancialServices = () => {
     align-items: center;
     justify-content: center;
 
-    min-height: calc(100vh - 135px);
+    min-height: calc(100vh - 80px);
     width: 100%;
     padding: 20px 0;
   `;
@@ -28,7 +28,7 @@ const FinancialServices = () => {
 
     width: 100%;
     max-width: 930px;
-    heigth: 100%;
+    height: 100%;
     padding: 10px 40px;
 
     align-items: flex-start;

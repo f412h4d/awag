@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import contactImage from "../images/best-contact-us-pages-760x400.png";
-import gpsImage from "../images/gps.png";
-import phoneImage from "../images/phone.svg";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import contactImage from '../images/best-contact-us-pages-760x400.png';
+import gpsImage from '../images/gps.png';
+import phoneImage from '../images/phone.svg';
 
 const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [text, setText] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
+  const [text, setText] = useState('');
 
   const [message, setMessage] = useState({});
 
@@ -26,7 +26,7 @@ const ContactUs = () => {
   };
   return (
     <Container>
-      <Image src={contactImage} alt="contact us"></Image>
+      <Image src={contactImage} alt='contact us'></Image>
       <Title>CONTACT US</Title>
       <Wrapper>
         <Box>
@@ -45,45 +45,45 @@ const ContactUs = () => {
       <Form>
         <HalfLeft>
           <Input
-            type="text"
-            id="input-name"
-            placeholder="Name"
+            type='text'
+            id='input-name'
+            placeholder='Name'
             value={name}
             onChange={(e) => setName(e.target.value)}
           />
           <Input
-            type="email"
-            id="input-email"
-            placeholder="Email address"
+            type='email'
+            id='input-email'
+            placeholder='Email address'
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input
-            type="phone"
-            id="input-subject"
-            placeholder="phone"
+            type='phone'
+            id='input-subject'
+            placeholder='phone'
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
           />
           <Input
-            type="text"
-            id="input-subject"
-            placeholder="Subject"
+            type='text'
+            id='input-subject'
+            placeholder='Subject'
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
           />
         </HalfLeft>
         <HalfRight>
           <Textarea
-            name="message"
-            type="text"
-            id="input-message"
-            placeholder="Message"
+            name='message'
+            type='text'
+            id='input-message'
+            placeholder='Message'
             value={text}
             onChange={(e) => setText(e.target.value)}
           ></Textarea>
         </HalfRight>
-        <Submit type="submit" value="Submit" onClick={submit} />
+        <Submit type='submit' value='Submit' onClick={submit} />
       </Form>
     </Container>
   );
@@ -92,12 +92,12 @@ const ContactUs = () => {
 export default ContactUs;
 
 const Container = styled.div`
-  width:100%
-  height:auto;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  align-items:center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 `;
 const Image = styled.img`
   width: 100%;
@@ -164,11 +164,11 @@ const Form = styled.form`
   text-align: center;
   margin: 20px 0px;
   &:before {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }
@@ -233,11 +233,11 @@ const HalfLeft = styled.div`
   margin-bottom: 1em;
   margin-right: 2%;
   &:before {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }
@@ -248,11 +248,11 @@ const HalfRight = styled.div`
   margin-bottom: 1em;
   width: 50%;
   &:before {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }

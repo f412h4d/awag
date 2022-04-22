@@ -19,6 +19,7 @@ function App() {
 
   const Main = styled.main`
     height: calc(100vh - 95px);
+    overflow-y: scroll;
     overflow-x: hidden;
   `;
 

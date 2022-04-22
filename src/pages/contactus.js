@@ -1,10 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import contactImage from "../images/best-contact-us-pages-760x400.png";
 import gpsImage from "../images/gps.png";
 import phoneImage from "../images/phone.svg";
 
 const ContactUs = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [text, setText] = useState("");
+
+  const [message, setMessage] = useState({});
+
+  const submit = () => {
+    const newMessage = {
+      name,
+      email,
+      phone,
+      subject,
+      text,
+    };
+    setMessage(newMessage);
+    console.log(message);
+  };
   return (
     <Container>
       <Image src={contactImage} alt="contact us"></Image>
@@ -25,10 +44,34 @@ const ContactUs = () => {
 
       <Form>
         <HalfLeft>
-          <Input type="text" id="input-name" placeholder="Name" />
-          <Input type="email" id="input-email" placeholder="Email address" />
-          <Input type="phone" id="input-subject" placeholder="phone" />
-          <Input type="text" id="input-subject" placeholder="Subject" />
+          <Input
+            type="text"
+            id="input-name"
+            placeholder="Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Input
+            type="email"
+            id="input-email"
+            placeholder="Email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            type="phone"
+            id="input-subject"
+            placeholder="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+          <Input
+            type="text"
+            id="input-subject"
+            placeholder="Subject"
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
         </HalfLeft>
         <HalfRight>
           <Textarea
@@ -36,9 +79,11 @@ const ContactUs = () => {
             type="text"
             id="input-message"
             placeholder="Message"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
           ></Textarea>
         </HalfRight>
-        <Submit type="submit" value="Submit" id="input-submit" />
+        <Submit type="submit" value="Submit" onClick={submit} />
       </Form>
     </Container>
   );

@@ -1,10 +1,18 @@
 import { Power3, TimelineLite, TweenMax } from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import './App.css';
-import { MemoAnimatedIcon } from './components/animated-icon';
+import { AnimatedIconMemo } from './components/animated-icon';
 import arrow from './images/arrow-right.svg';
 
-function Page({ title1, title2, title3, subtitle, animation }) {
+function Page({
+  title1,
+  title2,
+  title3,
+  subtitle,
+  animation,
+  buttonText,
+  buttonHandler,
+}) {
   let app = useRef(null);
   let images = useRef(null);
   let content = useRef(null);
@@ -69,8 +77,8 @@ function Page({ title1, title2, title3, subtitle, animation }) {
                 <p>{subtitle}</p>
 
                 <div className='btn-row'>
-                  <button className='explore-button'>
-                    Explore
+                  <button onClick={buttonHandler} className='explore-button'>
+                    {buttonText ? buttonText : 'Explore'}
                     <div className='arrow-icon'>
                       <img src={arrow} alt='row' />
                     </div>
@@ -82,12 +90,12 @@ function Page({ title1, title2, title3, subtitle, animation }) {
             <div className='hero-images'>
               <div ref={(el) => (images = el)} className='hero-images-inner'>
                 <div className='hero-image girl'>
-                  <MemoAnimatedIcon
+                  <AnimatedIconMemo
                     loop={true}
-                    iconWidth={'500px'}
-                    iconHeight={'500px'}
+                    iconWidth={'600px'}
+                    iconHeight={'600px'}
                     animationData={animation}
-                  ></MemoAnimatedIcon>
+                  ></AnimatedIconMemo>
                 </div>
               </div>
             </div>

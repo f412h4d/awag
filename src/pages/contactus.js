@@ -1,17 +1,23 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import contactImage from "../images/best-contact-us-pages-760x400.png";
-import gpsImage from "../images/gps.png";
-import phoneImage from "../images/phone.svg";
+import React, { useRef, useState } from 'react';
+import styled from 'styled-components';
+import contact from '../images/employees-doing-discussion-about-work-progress.json';
+import gpsImage from '../images/gps.png';
+import phoneImage from '../images/phone.svg';
+import Page from '../Page';
 
 const ContactUs = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [text, setText] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
+  const [text, setText] = useState('');
 
   const [message, setMessage] = useState({});
+
+  const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+
+  const myRef = useRef(null);
+  const executeScroll = () => scrollToRef(myRef);
 
   const submit = (e) => {
     e.preventDefault();
@@ -27,61 +33,72 @@ const ContactUs = () => {
   };
   return (
     <Container>
-      <Title>CONTACT US</Title>
+      <section id='investment'>
+        <Page
+          title1={'We are'}
+          title2={'Allways Here'}
+          title3={'For You'}
+          subtitle={'Contact us without obligation and let us advise you in detail!'}
+          animation={contact}
+          buttonText={'Lets Talk'}
+          buttonHandler={executeScroll}
+        ></Page>
+      </section>
 
       <SecondTitle>LETS TALK</SecondTitle>
-
-      <Form>
-        <Input
-          type="text"
-          id="input-name"
-          placeholder="Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <Input
-          type="email"
-          id="input-email"
-          placeholder="Email address"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <Input
-          type="phone"
-          id="input-subject"
-          placeholder="phone"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-        />
-        <Input
-          type="text"
-          id="input-subject"
-          placeholder="Subject"
-          value={subject}
-          onChange={(e) => setSubject(e.target.value)}
-        />
-        <Textarea
-          name="message"
-          type="text"
-          id="input-message"
-          placeholder="Message"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        ></Textarea>
-        <Submit type="submit" value="Submit" onClick={submit} />
-      </Form>
-      <Wrapper>
-        <Box>
-          <Icon src={phoneImage}></Icon>
-          <BoxTitle>PHONE</BoxTitle>
-          <BoxText>+43 1 890 90 99</BoxText>
-        </Box>
-        <Box>
-          <Icon src={gpsImage}></Icon>
-          <BoxTitle>LOCATION</BoxTitle>
-          <BoxText>Seidengasse 45, 1070 Vienna</BoxText>
-        </Box>
-      </Wrapper>
+      <WrapperRow ref={myRef}>
+        <Form>
+          <Input
+            type='text'
+            id='input-name'
+            placeholder='Name'
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <Input
+            type='email'
+            id='input-email'
+            placeholder='Email address'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <Input
+            type='phone'
+            id='input-subject'
+            placeholder='phone'
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+          <Input
+            type='text'
+            id='input-subject'
+            placeholder='Subject'
+            value={subject}
+            onChange={(e) => setSubject(e.target.value)}
+          />
+          <Textarea
+            name='message'
+            type='text'
+            id='input-message'
+            placeholder='Message'
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          ></Textarea>
+          <Submit type='submit' value='Submit' onClick={submit} />
+        </Form>
+        <Wrapper>
+          <Box>
+            <Icon src={phoneImage}></Icon>
+            <BoxTitle>PHONE</BoxTitle>
+            <BoxText>+43 1 890 90 99</BoxText>
+          </Box>
+          <Box>
+            <Icon src={gpsImage}></Icon>
+            <BoxTitle>LOCATION</BoxTitle>
+            <BoxText>Seidengasse 45, 1070 Vienna</BoxText>
+          </Box>
+        </Wrapper>
+      </WrapperRow>
     </Container>
   );
 };
@@ -110,6 +127,15 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+
+const WrapperRow = styled.div`
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`;
+
 const Box = styled.div`
   width: 300px;
   height: 200px;
@@ -143,19 +169,20 @@ const BoxText = styled.p`
 
 const Form = styled.form`
   background: rgba(241, 241, 241, 0.6);
-  width: auto;
+  width: 500px;
   height: auto;
   padding: 40px;
+  padding-left: 16px;
   border-radius: 10px;
   max-width: 900px;
   text-align: center;
   margin: 20px 0px;
   &:before {
-    content: " ";
+    content: ' ';
     display: table;
   }
   &:after {
-    content: " ";
+    content: ' ';
     display: table;
     clear: both;
   }

@@ -6,8 +6,8 @@ import registerAnimation from '../images/user-registration.json';
 import styles from './register.module.css';
 
 const Register = ({}) => {
-  const [loading, setLoading] = useState(false);
   const [slideup, setSlideup] = useState(false);
+
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState('');
@@ -30,11 +30,7 @@ const Register = ({}) => {
   };
 
   const toggleSlide = () => {
-    setLoading(true);
     setSlideup(() => !slideup);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1);
   };
 
   const variants = {

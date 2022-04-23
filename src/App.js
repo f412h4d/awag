@@ -2,6 +2,7 @@ import React from 'react';
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
+import { PostMemo } from './components/Post';
 import Navbar from './Navbar';
 import { BlogMemo } from './pages/blog/Blog';
 import ContactUs from './pages/contactus';
@@ -12,8 +13,7 @@ import { MarketingMemo } from './pages/Marketing';
 import Register from './pages/register';
 
 const App = () => {
-  const location = useLocation();
-  const path = location.pathname;
+  const path = useLocation().pathname;
 
   const Wrapper = styled.div`
     display: flex;
@@ -35,6 +35,8 @@ const App = () => {
           <Route exact path='/' element={<Navigate replace to='/financial' />} />
 
           <Route path='/blog' element={<BlogMemo />} />
+
+          <Route path='/post' element={<PostMemo />} />
 
           <Route path='/financial' element={<FinancialMemo />} />
 

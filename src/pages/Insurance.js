@@ -1,17 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import insurance from '../images/insurance.json';
+import Page from '../Page';
 
 const Insurance = () => {
-  const Container = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-  `;
-
   return (
-    <Container>
-      <p>Insurance</p>
-    </Container>
+    <section id='insurance'>
+      <Page
+        title1={'You Are'}
+        title2={'Safe'}
+        title3={'With Us'}
+        subtitle={
+          'We have a range of simple, flexible and best-value Life Insurance products to give you, and your loved ones, peace of mind.'
+        }
+        animation={insurance}
+      ></Page>
+    </section>
   );
 };
 

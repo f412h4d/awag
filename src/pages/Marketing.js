@@ -1,17 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import marketing from '../images/marketing.json';
+import Page from '../Page';
 
 const Marketing = () => {
-  const Container = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-  `;
-
   return (
-    <Container>
-      <p>Marketing</p>
-    </Container>
+    <section id='marketing'>
+      <Page
+        title1={'The World'}
+        title2={'Is Watching'}
+        title3={'You'}
+        subtitle={
+          'Boost your brand’s by integrating all marketing tools to reach your target audience.'
+        }
+        animation={marketing}
+      ></Page>
+    </section>
   );
 };
 

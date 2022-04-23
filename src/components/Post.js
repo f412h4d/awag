@@ -1,19 +1,47 @@
 import React from 'react';
-import './Post.css';
+import styled from 'styled-components';
+import styles from './Post.module.css';
+
+const Main = styled.main`
+  font-family: Lato, sans-serif;
+  display: grid;
+  grid-template-columns: 4rem 3fr 1fr 2rem;
+  margin-top: 2rem;
+  grid-column-gap: 2rem;
+`;
+
+const Header = styled.header`
+  grid-column: 2 / 5;
+`;
+
+const Content = styled.section`
+  grid-column: 2 / 3;
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.4;
+`;
+
+const Footer = styled.footer`
+  grid-column: 1 / 5;
+  background-color: #37474f;
+  padding: 0.7rem 1rem;
+  margin-top: 3rem;
+  text-align: right;
+`;
 
 const Post = () => {
   return (
-    <main class='post container'>
-      <header class='header'>
-        <p class='subheading'>Subheading for the Page</p>
-        <h1 class='heading'>Main Header of the Page</h1>
-      </header>
+    <Main>
+      <Header>
+        <p className={styles.subheading}>Subheading for the Page</p>
+        <h1 className={styles.heading}>Main Header of the Page</h1>
+      </Header>
 
-      <section class='content'>
+      <Content className={styles.content}>
         <img
           src='https://images.unsplash.com/photo-1466436578965-5cba086a1824?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=ac7f8b732c22f512fd982ffddc2078d6'
-          alt='large-image'
-          class='poster-image'
+          alt='large'
+          className={styles['poster-image']}
         />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cum aperiam ex,
@@ -56,39 +84,40 @@ const Post = () => {
           tincidunt eget. Quisque id diam vel quam elementum pulvinar. Aliquam purus sit
           amet luctus venenatis lectus magna. Diam donec adipiscing tristique risus.
         </p>
-      </section>
+      </Content>
 
-      <aside class='aside'>
-        <h4 class='heading'>Other Articles you might Enjoy</h4>
-        <div class='card'>
+      <aside className={styles.aside}>
+        <h4 className={styles.heading}>Other Articles you might Enjoy</h4>
+        <div className={styles.card}>
           <img
             src='https://images.unsplash.com/photo-1457269315919-3cfc794943cd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=2c42c1cac3092204f4c1afdca4d44e99'
             alt=''
           />
           <div>
-            <p class='heading title'>The big subtext</p>
-            <p class='author'>Mathews</p>
+            <p className={`${styles.heading} ${styles.title}`}>The big subtext</p>
+            <p className={styles.author}>Mathews</p>
           </div>
         </div>
-        <div class='card'>
+
+        <div className={styles.card}>
           <img
             src='https://images.unsplash.com/photo-1528640936814-4460bc015292?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=66812b5fda04c80ff762c8a920f562f3'
             alt=''
           />
           <div>
-            <p class='heading title'>The bug subtext</p>
-            <p class='author'>Harsha</p>
+            <p className={`${styles.heading} ${styles.title}`}>The bug subtext</p>
+            <p className={styles.author}>Harsha</p>
           </div>
         </div>
       </aside>
 
-      <footer class='footer'>
-        <a href='https://twitter.com/' target='_blank' class='name-link'>
+      <Footer>
+        <a href='https://twitter.com/' target='_blank' className={styles['name-link']}>
           By Author
         </a>
-      </footer>
-    </main>
+      </Footer>
+    </Main>
   );
 };
 
-export default React.memo(Post);
+export const PostMemo = React.memo(Post);

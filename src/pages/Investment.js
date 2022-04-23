@@ -1,17 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
+import investment from '../images/investment.json';
+import Page from '../Page';
 
 const Investment = () => {
-  const Container = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100%;
-  `;
-
   return (
-    <Container>
-      <p>Investment</p>
-    </Container>
+    <section id='investment'>
+      <Page
+        title1={'Investment'}
+        title2={'Is Now'}
+        title3={'Easy & Secure'}
+        subtitle={'Best for investors seeking new investment opportunities'}
+        animation={investment}
+      ></Page>
+    </section>
   );
 };
 

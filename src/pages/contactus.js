@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import contactImage from '../images/best-contact-us-pages-760x400.png';
-import gpsImage from '../images/gps.png';
-import phoneImage from '../images/phone.svg';
+import React, { useState } from "react";
+import styled from "styled-components";
+import contactImage from "../images/best-contact-us-pages-760x400.png";
+import gpsImage from "../images/gps.png";
+import phoneImage from "../images/phone.svg";
 
 const ContactUs = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [subject, setSubject] = useState('');
-  const [text, setText] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [text, setText] = useState("");
 
   const [message, setMessage] = useState({});
 
-  const submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
     const newMessage = {
       name,
       email,
@@ -26,8 +27,49 @@ const ContactUs = () => {
   };
   return (
     <Container>
-      <Image src={contactImage} alt='contact us'></Image>
       <Title>CONTACT US</Title>
+
+      <SecondTitle>LETS TALK</SecondTitle>
+
+      <Form>
+        <Input
+          type="text"
+          id="input-name"
+          placeholder="Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          type="email"
+          id="input-email"
+          placeholder="Email address"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="phone"
+          id="input-subject"
+          placeholder="phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+        <Input
+          type="text"
+          id="input-subject"
+          placeholder="Subject"
+          value={subject}
+          onChange={(e) => setSubject(e.target.value)}
+        />
+        <Textarea
+          name="message"
+          type="text"
+          id="input-message"
+          placeholder="Message"
+          value={text}
+          onChange={(e) => setText(e.target.value)}
+        ></Textarea>
+        <Submit type="submit" value="Submit" onClick={submit} />
+      </Form>
       <Wrapper>
         <Box>
           <Icon src={phoneImage}></Icon>
@@ -40,51 +82,6 @@ const ContactUs = () => {
           <BoxText>Seidengasse 45, 1070 Vienna</BoxText>
         </Box>
       </Wrapper>
-      <SecondTitle>LETS TALK</SecondTitle>
-
-      <Form>
-        <HalfLeft>
-          <Input
-            type='text'
-            id='input-name'
-            placeholder='Name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-          <Input
-            type='email'
-            id='input-email'
-            placeholder='Email address'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <Input
-            type='phone'
-            id='input-subject'
-            placeholder='phone'
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-          <Input
-            type='text'
-            id='input-subject'
-            placeholder='Subject'
-            value={subject}
-            onChange={(e) => setSubject(e.target.value)}
-          />
-        </HalfLeft>
-        <HalfRight>
-          <Textarea
-            name='message'
-            type='text'
-            id='input-message'
-            placeholder='Message'
-            value={text}
-            onChange={(e) => setText(e.target.value)}
-          ></Textarea>
-        </HalfRight>
-        <Submit type='submit' value='Submit' onClick={submit} />
-      </Form>
     </Container>
   );
 };
@@ -99,15 +96,6 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: center;
 `;
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  overflow-y: hidden;
-`;
 const Title = styled.h1`
   font-size: 34px;
   margin-top: 90px;
@@ -118,15 +106,14 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
 `;
 const Box = styled.div`
-  width: 500px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.6);
-  border: 1px solid blue;
   border-radius: 10px;
   margin-top: 20px;
   display: flex;
@@ -164,11 +151,11 @@ const Form = styled.form`
   text-align: center;
   margin: 20px 0px;
   &:before {
-    content: ' ';
+    content: " ";
     display: table;
   }
   &:after {
-    content: ' ';
+    content: " ";
     display: table;
     clear: both;
   }
@@ -180,7 +167,7 @@ const Input = styled.input`
   padding: 1em;
   border-radius: 8px;
   display: block;
-  width: 80%;
+  width: 100%;
   margin-top: 1em;
   box-shadow: 0 1px 1px rgba(black, 0.1);
   resize: none;
@@ -225,35 +212,5 @@ const Submit = styled.input`
 
   &:hover {
     box-shadow: 0 1px 1px 1px rgba(#aaa, 0.6);
-  }
-`;
-const HalfLeft = styled.div`
-  float: left;
-  width: 45%;
-  margin-bottom: 1em;
-  margin-right: 2%;
-  &:before {
-    content: ' ';
-    display: table;
-  }
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
-  }
-`;
-const HalfRight = styled.div`
-  float: left;
-  width: 45%;
-  margin-bottom: 1em;
-  width: 50%;
-  &:before {
-    content: ' ';
-    display: table;
-  }
-  &:after {
-    content: ' ';
-    display: table;
-    clear: both;
   }
 `;

@@ -112,7 +112,7 @@ const Wrapper = styled.div`
 `;
 const Box = styled.div`
   width: 300px;
-  height: 300px;
+  height: 200px;
   background: rgba(255, 255, 255, 0.6);
   border-radius: 10px;
   margin-top: 20px;

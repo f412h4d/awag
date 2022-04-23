@@ -1,34 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:300|Roboto:300&display=swap');
 
-/** 
- * Reset Styles 
- */
-* {
+img {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
   outline: 0;
   font: inherit;
-}
-
-img {
   border-style: none;
   height: auto;
 }
 
 a img {
-  border: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
   outline: none;
 }
 
 figure {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
   display: block;
   background-color: #fff;
   -ms-interpolation-mode: bicubic;
 }
 
 figure img {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font: inherit;
   display: block;
   width: auto;
   max-width: 100%;
@@ -56,7 +67,7 @@ figure img {
 /** 
  * Typography 
  */
-body {
+.blog-container {
   font-family: 'Roboto', sans-serif;
   font-size: 112.5%;
   font-style: normal;
@@ -112,7 +123,7 @@ body {
   height: 100%;
 }
 
-main {
+.blog-container {
   min-height: 100vh;
   margin: 0 auto;
   max-width: 1200px;

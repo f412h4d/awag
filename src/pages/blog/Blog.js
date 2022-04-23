@@ -28,7 +28,7 @@ const Blog = () => {
   ]);
 
   return (
-    <main>
+    <main className={styles['blog-container']}>
       <h1>Blog</h1>
 
       <div className={`${styles['post-list']} ${styles['post-list_grid']}`}>

@@ -10,6 +10,7 @@ import safe from "../images/AllIsometricJuly1-highRes-20-1.jpg";
 import creditIcon1 from "../images/credit-card.png";
 import creditIcon2 from "../images/credit-card1.png";
 import creditIcon3 from "../images/credit-card2.png";
+import { FooterMemo } from "../components/Footer";
 
 const Atm = () => {
   return (
@@ -66,113 +67,102 @@ const Atm = () => {
         </ChildSection>
       </ParentSection>
 
-      <ParentSection>
+      <InfoSection>
         <ChildSection>
-          <SecondTitle>You get full technical and legal support.</SecondTitle>
-          <TitleOne>Our service:</TitleOne>
+          <TitleOne>Advantages of ATMs</TitleOne>
           <BenefitList>
             <Benefits>
-              AWAG Financial has many technical solutions at its disposal and we
-              would be happy to advise you in detail.
+              Tailor-made solution for your individual location
+            </Benefits>
+            <Benefits>Customized design on request</Benefits>
+            <Benefits>Fair & Transparent - Unbeatable disposal fees</Benefits>
+            <Benefits>
+              Top quality - robust, durable and suitable for all weather
+              conditions
             </Benefits>
             <Benefits>
-              We support you and your employees with regard to all problems and
-              questions.
+              Lucrative investment - increase in sales & site upgrading
             </Benefits>
+            <Benefits>24/7 cash supply for your customers</Benefits>
             <Benefits>
-              You will be informed about the legal aspects of cooperation and
-              registration.
-            </Benefits>
-            <Benefits>We conduct training courses in many languages.</Benefits>
-            <Benefits>
-              AWAG Financial supports you and your employees with training and
-              billing.
+              The expert solution – own department for planning and installation
             </Benefits>
           </BenefitList>
         </ChildSection>
-        <HandImage src={realAtm} />
-      </ParentSection>
+        <HandImage src={thirdAtm} />
+      </InfoSection>
 
       <LastSectionWrapper>
-        <TitleOne>What kind of money transfers will you make?</TitleOne>
         <LastSection>
           <LastSectionChildWrapper>
             <LastChild>
-              <TinyTitle>money transfer</TinyTitle>
-              <TinyImage src={realAtm} />
+              <TinyImage src={creditIcon1} />
+              <TinyTitle>INDOOR</TinyTitle>
               <Text>
-                Money is transferred securely and directly to major banks around
-                the world. Your customers choose the address of the withdrawer
-                and the depositing bank directly from their smartphone or
-                laptop. Customers can send money on the go and track the status
-                of the transfer on their cell phone.
+                The indoor solutions are ideal for entrance areas, shop areas or
+                for installation directly in the checkout area...
               </Text>
+              <ReadLink>Continue reading</ReadLink>
             </LastChild>
             <LastChild>
-              <TinyTitle>cash pickup</TinyTitle>
-              <TinyImage src={realAtm} />
+              <TinyImage src={creditIcon2} />
+              <TinyTitle>OUTDOOR</TinyTitle>
               <Text>
-                Cash pickup can be arranged at thousands of branches around the
-                world. The money is sent and credited to the bank account or to
-                the mobile phone (mobile wallet).
+                Cash dispensers for outdoor use are ideally suited to
+                well-frequented inner-city locations. They are often found in...
               </Text>
+              <ReadLink>Continue reading</ReadLink>
             </LastChild>
             <LastChild>
-              <TinyTitle>Mobile Money</TinyTitle>
-              <TinyImage src={realAtm} />
+              <TinyImage src={creditIcon3} />
+              <TinyTitle>WALL AND GLASS CONSTRUCTION</TinyTitle>
               <Text>
-                Mobile Money is the electronic wallet service for
-                cryptocurrencies. This means that money can be sent to 80
-                different countries worldwide in a matter of seconds.
+                Cash dispensers installed through the wall or glass are a very
+                effective solution to the ...
               </Text>
+              <ReadLink>Continue reading</ReadLink>
             </LastChild>
           </LastSectionChildWrapper>
         </LastSection>
       </LastSectionWrapper>
 
       <ParentSection background="secondary">
-        <IconsWrapper>
-          <IconsBox>
-            <Icon src={realAtm} />
-          </IconsBox>
-          <IconsBox>
-            <Icon src={realAtm} />
-          </IconsBox>
-          <IconsBox>
-            <Icon src={realAtm} />
-          </IconsBox>
-          <IconsBox>
-            <Icon src={realAtm} />
-          </IconsBox>
-        </IconsWrapper>
+        <ChildSection>
+          <TitleOne>Our complete service package for ATMs</TitleOne>
+          <BenefitContainer>
+            <BenefitColumn>
+              <Benefits>Individual analysis</Benefits>
+              <Benefits>Planung & Consulting</Benefits>
+              <Benefits>Device maintenance & service</Benefits>
+              <Benefits>Cash management (reporting)</Benefits>
+            </BenefitColumn>
+            <BenefitColumn>
+              <Benefits>Messaging (Reporting)</Benefits>
+              <Benefits>Customized solution</Benefits>
+              <Benefits>Reliable support</Benefits>
+            </BenefitColumn>
+          </BenefitContainer>
+        </ChildSection>
+        <HandImage src={fourthAtm} />
       </ParentSection>
 
       <InfoSection>
-        <HandImage src={realAtm} alt="" />
+        <HandImage src={safe} alt="" />
         <ChildSection>
-          <TitleOne>
-            AWAG Financial only works with renowned, reputable partners!
-          </TitleOne>
-          <SecondTitle>Benefits with these partners</SecondTitle>
-
-          <BenefitList>
-            <Benefits>The money transfer is quick and uncomplicated.</Benefits>
-            <Benefits>
-              Our industry-leading technology protects money so it's guaranteed
-              to get there.
-            </Benefits>
-            <Benefits>
-              Fast delivery as 90% of transactions are authorized within
-              minutes.
-            </Benefits>
-            <Benefits>
-              The service is inexpensive and the customer anticipates the
-              relatively low fees and favorable exchange rates.
-            </Benefits>
-            <Benefits>No hidden costs for the customer.</Benefits>
-          </BenefitList>
+          <TitleOne>security</TitleOne>
+          <Text>
+            Our ATMs are equipped with an interactive one-time code lock system,
+            which is also used in safes with high security regulations. A new
+            code is used for each use, which guarantees an extremely high level
+            of security. In addition, our devices are equipped with an ink
+            coloring system. In the event of a break-in, this system activates,
+            coloring the cash and rendering it completely unusable. This type of
+            security system deters potential criminals in advance, since
+            breaking into such an ATM is completely counterproductive.
+          </Text>
         </ChildSection>
       </InfoSection>
+      <FooterMemo></FooterMemo>
     </Container>
   );
 };
@@ -233,35 +223,6 @@ const Text = styled.div`
   margin-bottom: 15px;
 `;
 
-const BoldText = styled.div`
-  text-align: justify;
-  line-height: 32px;
-  color: #222;
-  margin-bottom: 15px;
-  font-weight: 700;
-`;
-
-const Space = styled.div`
-  margin: 20px;
-`;
-
-const DownloadWrapper = styled.div`
-  width: auto;
-  height: auto;
-  display: flex;
-`;
-
-const AndroidImage = styled.img`
-  margin-right: 8px;
-  width: 250px;
-  height: 82px;
-`;
-
-const IosImage = styled.img`
-  width: 250px;
-  height: 82px;
-`;
-
 const BitAtm = styled.img`
   max-width: 40%;
   height: auto;
@@ -275,15 +236,22 @@ const InfoSection = styled.div`
   justify-content: space-around;
   align-items: center;
   padding-top: 50px;
+  margin-bottom: 40px;
 `;
-const BlackSecondTitle = styled.div`
-  font-size: 20px;
-  line-height: 32px;
-  font-weight: 700;
-  letter-spacing: 0px;
-  color: black;
+
+const BenefitContainer = styled.div`
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+`;
+const BenefitColumn = styled.ul`
+  width: 40%;
   margin-bottom: 15px;
 `;
+
 const BenefitList = styled.ul`
   margin-bottom: 15px;
 `;
@@ -294,7 +262,7 @@ const Benefits = styled.li`
   list-style: none;
   :before {
     content: "✓";
-    color: red;
+    color: blue;
   }
 `;
 
@@ -304,97 +272,6 @@ const HandImage = styled.img`
   height: auto;
   max-width: 40%;
   height: auto;
-`;
-
-const TabsWrapper = styled.div`
-  width: 40%;
-  height: auto;
-  border: 1px solid #999999;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-`;
-
-const TabButtonsWrapper = styled.div`
-  width: 100%;
-  height: 50px;
-  border-width: 0 1px 0 0;
-  border-color: rgba(0, 0, 0, 0.08);
-  margin: 0;
-  padding: 0;
-  display: flex;
-`;
-
-const TabsButtons = styled.div`
-  width: 50%;
-  height: 50px;
-  background: #ededed;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  color: #444;
-  border-style: solid;
-  border-width: 0 1px 0 0;
-  border-color: #999999;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.6s ease-out;
-  ${(props) =>
-    props.toggleTabs
-      ? `
-      :first-child{
-        background:white;
-        cursor:default;
-        border-bottom:none;
-      }
-      `
-      : `
-      :nth-child(2){
-        background:white;
-        cursor:default;
-        border-bottom:none;
-      } 
-    `}
-`;
-
-const GrayImgae = styled.img`
-  max-width: 100%;
-  height: auto;
-`;
-
-const IconsWrapper = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  margin-bottom: 60px;
-`;
-
-const IconsBox = styled.div`
-  width: auto;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Icon = styled.img`
-  width: auto;
-  height: 100px;
-`;
-
-const IconText = styled.div`
-  margin: 20px;
-  color: #050505;
-  font-size: 20px;
-  line-height: 32px;
-  font-weight: 300;
-  letter-spacing: 0px;
 `;
 
 const LastSectionWrapper = styled.div`
@@ -435,21 +312,31 @@ const LastChild = styled.div`
 `;
 
 const TinyTitle = styled.div`
-  font-weight: 700;
-  color: #050505;
   font-size: 20px;
   line-height: 32px;
   letter-spacing: 0px;
   margin-bottom: 15px;
+  color: #050505;
 `;
 
 const TinyImage = styled.img`
-  width: 100px;
-  height: 100px;
+  width: 64px;
+  height: 64px;
   margin-bottom: 15px;
 `;
 
-const LastImage = styled.img`
-  max-width: 38%;
+const ReadLink = styled.a`
+  color: #444444;
+  width: auto;
   height: auto;
+  margin: 30px 0;
+  cursor: pointer;
+  :visited {
+    text-decoration: none;
+    outline: 0;
+  }
+  :focus {
+    text-decoration: none;
+    outline: 0;
+  }
 `;

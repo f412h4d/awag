@@ -18,6 +18,7 @@ import atm from "../images/atmicon.png";
 import config from "../images/configurationicon.png";
 import ad from "../images/advertisementicon.png";
 import business from "../images/business-ideaicon.png";
+import { FooterMemo } from "../components/Footer";
 
 const Machines = () => {
   const [toggleTabs, setToggleTabs] = useState(true);
@@ -235,6 +236,7 @@ const Machines = () => {
           <LastImage src={last} />
         </LastSection>
       </LastSectionWrapper>
+      <FooterMemo></FooterMemo>
     </Container>
   );
 };

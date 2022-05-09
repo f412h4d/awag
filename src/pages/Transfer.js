@@ -13,6 +13,7 @@ import cashIcon from "../images/Cash_Pickup-512.png";
 import pickupIcon from "../images/989622-3.png";
 import moblieIcon from "../images/mobile.png";
 import walletCycle from "../images/4656904.png";
+import { FooterMemo } from "../components/Footer";
 
 const Transfer = () => {
   return (
@@ -179,6 +180,7 @@ const Transfer = () => {
           </BenefitList>
         </ChildSection>
       </InfoSection>
+      <FooterMemo></FooterMemo>
     </Container>
   );
 };

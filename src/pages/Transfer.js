@@ -107,31 +107,31 @@ const Transfer = () => {
             <LastChild>
               <TinyTitle>money transfer</TinyTitle>
               <TinyImage src={cashIcon} />
-              <Text>
+              <TextCenter>
                 Money is transferred securely and directly to major banks around
                 the world. Your customers choose the address of the withdrawer
                 and the depositing bank directly from their smartphone or
                 laptop. Customers can send money on the go and track the status
                 of the transfer on their cell phone.
-              </Text>
+              </TextCenter>
             </LastChild>
             <LastChild>
               <TinyTitle>cash pickup</TinyTitle>
               <TinyImage src={pickupIcon} />
-              <Text>
+              <TextCenter>
                 Cash pickup can be arranged at thousands of branches around the
                 world. The money is sent and credited to the bank account or to
                 the mobile phone (mobile wallet).
-              </Text>
+              </TextCenter>
             </LastChild>
             <LastChild>
               <TinyTitle>Mobile Money</TinyTitle>
               <TinyImage src={mobileIcon} />
-              <Text>
+              <TextCenter>
                 Mobile Money is the electronic wallet service for
                 cryptocurrencies. This means that money can be sent to 80
                 different countries worldwide in a matter of seconds.
-              </Text>
+              </TextCenter>
             </LastChild>
           </LastSectionChildWrapper>
         </LastSection>
@@ -239,6 +239,14 @@ const Text = styled.div`
   line-height: 32px;
   color: #222;
   margin-bottom: 15px;
+`;
+
+const TextCenter = styled.div`
+  line-height: 32px;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: justify;
+  text-align-last: center;
 `;
 
 const BoldText = styled.div`

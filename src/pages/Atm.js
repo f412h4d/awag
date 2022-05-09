@@ -98,28 +98,28 @@ const Atm = () => {
             <LastChild>
               <TinyImage src={creditIcon1} />
               <TinyTitle>INDOOR</TinyTitle>
-              <Text>
+              <TextCenter>
                 The indoor solutions are ideal for entrance areas, shop areas or
                 for installation directly in the checkout area...
-              </Text>
+              </TextCenter>
               <ReadLink>Continue reading</ReadLink>
             </LastChild>
             <LastChild>
               <TinyImage src={creditIcon2} />
               <TinyTitle>OUTDOOR</TinyTitle>
-              <Text>
+              <TextCenter>
                 Cash dispensers for outdoor use are ideally suited to
                 well-frequented inner-city locations. They are often found in...
-              </Text>
+              </TextCenter>
               <ReadLink>Continue reading</ReadLink>
             </LastChild>
             <LastChild>
               <TinyImage src={creditIcon3} />
               <TinyTitle>WALL AND GLASS CONSTRUCTION</TinyTitle>
-              <Text>
+              <TextCenter>
                 Cash dispensers installed through the wall or glass are a very
                 effective solution to the ...
-              </Text>
+              </TextCenter>
               <ReadLink>Continue reading</ReadLink>
             </LastChild>
           </LastSectionChildWrapper>
@@ -221,6 +221,15 @@ const Text = styled.div`
   line-height: 32px;
   color: #222;
   margin-bottom: 15px;
+`;
+
+const TextCenter = styled.div`
+  line-height: 32px;
+  color: #222;
+  margin-bottom: 15px;
+  text-align: center;
+  text-align: justify;
+  text-align-last: center;
 `;
 
 const BitAtm = styled.img`

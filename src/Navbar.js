@@ -12,20 +12,8 @@ export default class Navbar extends Component {
 
           <ul className='nav-items'>
             <li className='nav-item'>
-              <Link activeClass='active' to='/investment'>
-                Investment
-              </Link>
-            </li>
-
-            <li className='nav-item'>
-              <Link activeClass='active' to='/insurance'>
-                Insurance
-              </Link>
-            </li>
-
-            <li className='nav-item'>
-              <Link activeClass='active' to='/marketing'>
-                Marketing
+              <Link activeClass='active' to='/blog'>
+                Other Services
               </Link>
             </li>
 

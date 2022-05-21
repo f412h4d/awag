@@ -2,6 +2,7 @@ import React from "react";
 import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import "./App.css";
+import btnNavbar from "./BtnNavbar";
 import { PostMemo } from "./components/Post";
 import Navbar from "./Navbar";
 import Atm from "./pages/Atm";
@@ -14,6 +15,7 @@ import Machines from "./pages/Machines";
 import { MarketingMemo } from "./pages/Marketing";
 import Register from "./pages/register";
 import Transfer from "./pages/Transfer";
+import BtnNavbar from "./BtnNavbar";
 
 const App = () => {
   const path = useLocation().pathname;
@@ -24,7 +26,7 @@ const App = () => {
   `;
 
   const Main = styled.main`
-    height: ${path !== "/register" ? "calc(100vh - 95px)" : "100vh"} };
+    height: ${path !== "/register" ? "calc(100vh - 95px)" : "100vh"};
     overflow-y: scroll;
     overflow-x: hidden;
   `;
@@ -32,6 +34,8 @@ const App = () => {
   const RouterPages = (
     <Wrapper>
       {path !== "/register" && <Navbar></Navbar>}
+
+      {path !== "/register" && <BtnNavbar></BtnNavbar>}
 
       <Main>
         <Routes>

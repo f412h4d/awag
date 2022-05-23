@@ -2,7 +2,7 @@ import lottie from 'lottie-web';
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 
-const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData, autoplay }) => {
+const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData }) => {
   const ref = useRef(null);
   const [animation, setAnimation] = useState();
 
@@ -11,7 +11,7 @@ const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData, autoplay }) 
       const animationItem = lottie.loadAnimation({
         animationData,
         loop,
-        autoplay: autoplay === null ? true : autoplay,
+        autoplay: true,
         container: ref.current,
       });
 

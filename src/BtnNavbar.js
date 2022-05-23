@@ -1,13 +1,18 @@
 import lottie from 'lottie-web';
 import React, { useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { AnimatedIconMemo } from './components/animated-icon';
 import menuIcon from './images/close-center-menu.json';
+import financialIcon from './images/financial-consulting.json';
 import insuranceIcon from './images/insurance.json';
 import investmentIcon from './images/investment.json';
 import marketingIcon from './images/marketing.json';
 
 export const BtnNavbar = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [isHidden, setHidden] = useState(false);
   const [isClicked, setClicked] = useState(false);
 
@@ -63,38 +68,57 @@ export const BtnNavbar = () => {
       {/* FIXME change this into styled componen to fix the flashing (no animation when clicking) */}
       {!isHidden && (
         <div class='btn-nav-items'>
-          <div class='btn-nav-item'>
-            <AnimatedIconMemo
-              loop={true}
-              autoplay={true}
-              iconWidth={'19rem'}
-              iconHeight={'80%'}
-              animationData={marketingIcon}
-            ></AnimatedIconMemo>
-            Marketing
-          </div>
+          {location.pathname !== '/financial' && (
+            <div class='btn-nav-item' onClick={() => navigate('/financial')}>
+              <AnimatedIconMemo
+                loop={true}
+                autoplay={true}
+                iconWidth={'19rem'}
+                iconHeight={'80%'}
+                animationData={financialIcon}
+              ></AnimatedIconMemo>
+              Financial
+            </div>
+          )}
 
-          <div class='btn-nav-item'>
-            <AnimatedIconMemo
-              loop={true}
-              autoplay={true}
-              iconWidth={'19rem'}
-              iconHeight={'80%'}
-              animationData={insuranceIcon}
-            ></AnimatedIconMemo>
-            Insurance
-          </div>
+          {location.pathname !== '/marketing' && (
+            <div class='btn-nav-item' onClick={() => navigate('/marketing')}>
+              <AnimatedIconMemo
+                loop={true}
+                autoplay={true}
+                iconWidth={'19rem'}
+                iconHeight={'80%'}
+                animationData={marketingIcon}
+              ></AnimatedIconMemo>
+              Marketing
+            </div>
+          )}
 
-          <div class='btn-nav-item'>
-            <AnimatedIconMemo
-              loop={true}
-              autoplay={true}
-              iconWidth={'19rem'}
-              iconHeight={'80%'}
-              animationData={investmentIcon}
-            ></AnimatedIconMemo>
-            Investment
-          </div>
+          {location.pathname !== '/insurance' && (
+            <div class='btn-nav-item' onClick={() => navigate('/insurance')}>
+              <AnimatedIconMemo
+                loop={true}
+                autoplay={true}
+                iconWidth={'19rem'}
+                iconHeight={'80%'}
+                animationData={insuranceIcon}
+              ></AnimatedIconMemo>
+              Insurance
+            </div>
+          )}
+
+          {location.pathname !== '/investment' && (
+            <div class='btn-nav-item' onClick={() => navigate('/investment')}>
+              <AnimatedIconMemo
+                loop={true}
+                autoplay={true}
+                iconWidth={'19rem'}
+                iconHeight={'80%'}
+                animationData={investmentIcon}
+              ></AnimatedIconMemo>
+              Investment
+            </div>
+          )}
         </div>
       )}
     </div>

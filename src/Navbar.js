@@ -1,7 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useReducer, useState } from 'react';
 // import { animateScroll as scroll, Link } from 'react-scroll';
 import { Link } from 'react-router-dom';
 import logo from './images/awag-logo-1.png';
+import Lottie from 'lottie-web';
+import { useLocation, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+import { AnimatedIconMemo } from './components/animated-icon';
+import menuIcon from './images/close-center-menu.json';
+import financialIcon from './images/financial-consulting.json';
+import insuranceIcon from './images/insurance.json';
+import investmentIcon from './images/investment.json';
+import marketingIcon from './images/marketing.json';
+
 
 export default class Navbar extends Component {
   render() {
@@ -17,33 +27,43 @@ export default class Navbar extends Component {
               <Link activeClass='active' to=''>
                 Other Services
               </Link>
-
-              <div className="dropdown-menu">
-                <Link className='dm-item' activeClass='active' to=''>
-                  <img src="https://via.placeholder.com/300" alt="" className="dm-item-img" />
-                    
-                  <h1 className="dm-item-title">
-                    Item Name
-                  </h1>
-                </Link>
-
-                <Link className='dm-item' activeClass='active' to=''>
-                  <img src="https://via.placeholder.com/300" alt="" className="dm-item-img" />
-                    
-                  <h1 className="dm-item-title">
-                    Item Name
-                  </h1>
-                </Link>
-                
-                <Link className='dm-item' activeClass='active' to=''>
-                  <img src="https://via.placeholder.com/300" alt="" className="dm-item-img" />
-                    
-                  <h1 className="dm-item-title">
-                    Item Name
-                  </h1>
-                </Link>
-              </div>
             </li>
+
+            {/* Other services dropdown menu */}
+            <div className="dropdown-menu" id="drop">
+              <Link className='dm-item' activeClass='active' to=''>
+                <AnimatedIconMemo
+                  loop={true}
+                  autoplay={true}
+                  iconWidth={'19rem'}
+                  iconHeight={'80%'}
+                  animationData={financialIcon}
+                ></AnimatedIconMemo>
+                  Financial
+              </Link>
+
+              <Link className='dm-item' activeClass='active' to=''>
+                <AnimatedIconMemo
+                  loop={true}
+                  autoplay={true}
+                  iconWidth={'19rem'}
+                  iconHeight={'80%'}
+                  animationData={marketingIcon}
+                ></AnimatedIconMemo>
+                  Marketing
+              </Link>
+              
+              <Link className='dm-item' activeClass='active' to=''>
+                <AnimatedIconMemo
+                  loop={true}
+                  autoplay={true}
+                  iconWidth={'19rem'}
+                  iconHeight={'80%'}
+                  animationData={insuranceIcon}
+                ></AnimatedIconMemo>
+                  Insurance
+              </Link>
+            </div>
 
             <li className='nav-item'>
               <Link activeClass='active' to='/blog'>

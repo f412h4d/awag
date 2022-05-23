@@ -25,7 +25,7 @@ const App = () => {
   `;
 
   const Main = styled.main`
-    height: ${path !== '/register' ? 'calc(100vh - 95px)' : '100vh'};
+    height: ${path !== '/register' ? 'calc(100vh - 80px)' : '100vh'};
     overflow-y: scroll;
     overflow-x: hidden;
   `;

@@ -1,24 +1,39 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 
-export default class BtnNavbar extends Component {
-  render() {
-    return (
-      <div class="btn-nav">
-      <button class="nav-trigger">
-          {/* icon */}
-      </button>
+export const BtnNavbar = () => {
+  const [isClicked, setClicked] = useState(false);
+  const [isHidden, setHidden] = useState(false);
 
-      <div class="btn-nav-items">
-         <div class="btn-nav-item">item1</div>
+  const onBlur = () => {
+    if (!isClicked) {
+      return setClicked(true);
+    }
 
-         <div class="btn-nav-item">item2</div>
+    setHidden(true);
+    setClicked(false);
 
-         <div class="btn-nav-item">item3</div>
-         
-         <div class="btn-nav-item">item4</div>
-      </div>
-   </div>
+    const tempInput = document.createElement('input');
 
-    );
-  }
-}
+    document.body.appendChild(tempInput);
+    tempInput.focus();
+    document.body.removeChild(tempInput);
+  };
+
+  return (
+    <div class='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
+      <button class='nav-trigger'>{/* icon */}</button>
+
+      {!isHidden && (
+        <div class='btn-nav-items'>
+          <div class='btn-nav-item'>item1</div>
+
+          <div class='btn-nav-item'>item2</div>
+
+          <div class='btn-nav-item'>item3</div>
+
+          <div class='btn-nav-item'>item4</div>
+        </div>
+      )}
+    </div>
+  );
+};

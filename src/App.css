@@ -182,7 +182,7 @@ html body {
 /* bottom OtherSevices btnNavbar */
 
 .btn-nav {
-  position:fixed;
+  position: fixed;
   display: flex;
   flex-direction: column-reverse;
   align-items: flex-end;
@@ -203,17 +203,16 @@ html body {
   height: 6vh;
   border-radius: 50%;
 
-  background-color: rgba(0, 0, 0, .5);
-  
+  background-color: rgba(0, 0, 0, 0.5);
+
   border-style: none;
   cursor: pointer;
 }
 
-
 .nav-trigger:focus,
 .btn-nav:hover .nav-trigger {
   backdrop-filter: blur(5rem);
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .btn-nav-items {
@@ -229,7 +228,7 @@ html body {
   padding: 1rem 1rem 3rem 1rem;
   border-radius: 1rem;
 
-  transition:width .4s , height .35s , opacity .2s;  
+  transition: width 0.4s, height 0.35s, opacity 0.2s;
 }
 
 .nav-trigger:focus + .btn-nav-items,
@@ -248,10 +247,10 @@ html body {
 
   height: 22%;
   border-radius: 1rem;
-  background: linear-gradient(45deg, rgb(193, 247, 232, .9), rgba(226, 255, 247, .3));
+  background: linear-gradient(45deg, rgb(193, 247, 232, 0.9), rgba(226, 255, 247, 0.3));
   backdrop-filter: blur(16px);
 
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .btn-nav-item:hover {

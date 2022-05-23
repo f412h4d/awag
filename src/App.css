@@ -206,7 +206,7 @@ html body {
   height: 3.5rem;
   border-radius: 50%;
 
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.35);
 
   border-style: none;
   cursor: pointer;
@@ -232,7 +232,7 @@ html body {
   padding: 1rem 1rem 3rem 1rem;
   border-radius: 1rem;
 
-  transition: width 0.55s, height 0.35s, opacity 0.2s;
+  transition: width 0.7s, height 0.35s, opacity 0.2s;
 }
 
 .nav-trigger:focus + .btn-nav-items,
@@ -246,8 +246,12 @@ html body {
 
 .btn-nav-item {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+  color: #333;
+  font-size: 0.9rem;
 
   height: 32%;
   border-radius: 1rem;

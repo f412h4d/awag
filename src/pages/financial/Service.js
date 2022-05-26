@@ -21,7 +21,7 @@ const Service = ({ image, title, description }) => {
   `;
 
   const ServiceImage = styled.img`
-    height 50%;
+    height: 50%;
     width: 100%;
   `;
 

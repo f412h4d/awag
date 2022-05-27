@@ -6,7 +6,7 @@ import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';
 import software from '../../images/software.json';
 import team from '../../images/teamwork.json';
-import { ContactMemo } from './Financial-contact';
+import { ContactMemo } from './Financial-Contact';
 import { FinancialHeaderMemo } from './Financial-Header';
 import { FinancialServicesMemo } from './Financial-Services';
 import { StatsMemo } from './Financial-Stats';

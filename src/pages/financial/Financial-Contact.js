@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { AnimatedIconMemo } from '../../components/Animated-Icon';
 import financialAnalysis from '../../images/financial-analysis-by-employer.json';
 
 const Contact = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Content>
@@ -14,13 +17,12 @@ const Contact = () => {
             animationData={financialAnalysis}
           />
         </div>
-        
-      <MainContainer>
-        <Title>BECOME A PIONEER OF THE DIGITAL ECONOMY!</Title>
 
-        <Btn>Contact</Btn>
-      </MainContainer>
+        <MainContainer>
+          <Title>BECOME A PIONEER OF THE DIGITAL ECONOMY!</Title>
 
+          <Btn onClick={() => navigate('/contact')}>Contact</Btn>
+        </MainContainer>
       </Content>
     </Container>
   );
@@ -52,7 +54,6 @@ const MainContainer = styled.div`
   justify-content: space-between;
 
   height: 250px;
-
 `;
 
 const Title = styled.p`
@@ -81,7 +82,6 @@ const Btn = styled.p`
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
   }
 `;
 

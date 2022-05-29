@@ -20,17 +20,7 @@ const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData }) => {
   }, []);
 
   return (
-    <LottieIcon
-      // onMouseEnter={() => {
-      //   animation.play();
-      // }}
-      // onMouseLeave={() => {
-      //   animation.stop();
-      // }}
-      ref={ref}
-      iconWidth={iconWidth}
-      iconHeight={iconHeight}
-    ></LottieIcon>
+    <LottieIcon ref={ref} iconWidth={iconWidth} iconHeight={iconHeight}></LottieIcon>
   );
 };
 

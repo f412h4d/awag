@@ -1,19 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
+import { Autoplay, Navigation, Pagination } from 'swiper';
+import 'swiper/modules/navigation/navigation.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import 'swiper/swiper.min.css';
-import 'swiper/components/pagination/pagination.min.css'
-
 import { AnimatedContentMemo } from '../../components/Animated-Content';
 import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';
 import software from '../../images/software.json';
 
-
 const SwiperContent = () => {
-
   const Container = styled.div`
     width: 100vw;
     min-height: calc(100vh - 80px);
@@ -21,10 +18,20 @@ const SwiperContent = () => {
     background-color: #f4f4f4;
   `;
 
-
   return (
     <Container>
-      <Swiper>
+      <Swiper
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        modules={[Autoplay, Pagination, Navigation]}
+      >
         <SwiperSlide>
           <AnimatedContentMemo
             header={'Consulting & Development'}
@@ -66,5 +73,3 @@ const SwiperContent = () => {
 };
 
 export const SwiperMemo = React.memo(SwiperContent);
-
-

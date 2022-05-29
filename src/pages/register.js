@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React, { useState } from 'react';
-import { AnimatedIconMemo } from '../components/animated-icon';
+import { AnimatedIconMemo } from '../components/Animated-Icon';
 import girlLogin from '../images/girl-login.json';
 import registerAnimation from '../images/user-registration.json';
 import styles from './register.module.css';

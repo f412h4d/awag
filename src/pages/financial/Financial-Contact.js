@@ -9,8 +9,8 @@ const Contact = () => {
       <Content>
         <div>
           <AnimatedIconMemo
-            iconHeight={'600px'}
-            iconWidth={'600px'}
+            iconHeight={'400px'}
+            iconWidth={'400px'}
             animationData={financialAnalysis}
           />
         </div>
@@ -42,7 +42,7 @@ const Content = styled.div`
   justify-content: space-around;
 
   width: 95vw;
-  height: 650px;
+  height: 450px;
 `;
 
 const MainContainer = styled.div`
@@ -66,7 +66,7 @@ const Title = styled.p`
   color: #333;
 `;
 
-const Btn = styled.a`
+const Btn = styled.p`
   margin: 0 0 1.5rem 0;
   padding: 1.4rem 8.5rem;
 
@@ -78,6 +78,11 @@ const Btn = styled.a`
   background-color: #a42424;
 
   cursor: pointer;
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  }
 `;
 
 export const ContactMemo = React.memo(Contact);

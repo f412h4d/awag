@@ -6,19 +6,22 @@ import financialAnalysis from '../../images/financial-analysis-by-employer.json'
 const Contact = () => {
   return (
     <Container>
-      <ContactContent>
-        <ContactAnimation>
+      <Content>
+        <div>
           <AnimatedIconMemo
-            iconHeight={'170px'}
-            iconWidth={'170px'}
+            iconHeight={'600px'}
+            iconWidth={'600px'}
             animationData={financialAnalysis}
           />
-        </ContactAnimation>
+        </div>
+        
+      <MainContainer>
+        <Title>BECOME A PIONEER OF THE DIGITAL ECONOMY!</Title>
 
-        <ContactTitle>BECOME A PIONEER OF THE DIGITAL ECONOMY!</ContactTitle>
+        <Btn>Contact</Btn>
+      </MainContainer>
 
-        <ContactBtn>Contact</ContactBtn>
-      </ContactContent>
+      </Content>
     </Container>
   );
 };
@@ -33,19 +36,28 @@ const Container = styled.div`
   background-color: #c1f7e8;
 `;
 
-const ContactContent = styled.div`
+const Content = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
 
-  max-width: 80vw;
-  height: 240px;
+  width: 95vw;
+  height: 650px;
 `;
 
-const ContactAnimation = styled.div``;
+const MainContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 
-const ContactTitle = styled.p`
-  padding: 0 14rem 1.4rem 3rem;
+  height: 250px;
+
+`;
+
+const Title = styled.p`
+  padding: 0;
+  width: 350px;
 
   font-size: 30px;
   font-weight: 600;
@@ -54,7 +66,7 @@ const ContactTitle = styled.p`
   color: #333;
 `;
 
-const ContactBtn = styled.a`
+const Btn = styled.a`
   margin: 0 0 1.5rem 0;
   padding: 1.4rem 8.5rem;
 

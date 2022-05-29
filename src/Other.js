@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './App.css';
-import { MemoAnimatedIcon } from './components/animated-icon';
+import { MemoAnimatedIcon } from './components/Animated-Icon';
 import arrow from './images/arrow-right.svg';
 
 function Other({ title1, title2, title3, subtitle, animation }) {

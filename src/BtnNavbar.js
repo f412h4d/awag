@@ -2,7 +2,7 @@ import lottie from 'lottie-web';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { AnimatedIconMemo } from './components/animated-icon';
+import { AnimatedIconMemo } from './components/Animated-Icon';
 import menuIcon from './images/close-center-menu.json';
 import financialIcon from './images/financial-consulting.json';
 import insuranceIcon from './images/insurance.json';
@@ -59,8 +59,8 @@ export const BtnNavbar = () => {
   };
 
   return (
-    <div class='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
-      <button class='nav-trigger'>
+    <div className='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
+      <button className='nav-trigger'>
         {/* Play Animation For Hover Too */}
         <LottieIcon onClick={playOnClick} ref={ref}></LottieIcon>
       </button>

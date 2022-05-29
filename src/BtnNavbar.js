@@ -2,7 +2,7 @@ import lottie from 'lottie-web';
 import React, { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import { AnimatedIconMemo } from './components/animated-icon';
+import { AnimatedIconMemo } from './components/Animated-Icon';
 import menuIcon from './images/close-center-menu.json';
 import financialIcon from './images/financial-consulting.json';
 import insuranceIcon from './images/insurance.json';

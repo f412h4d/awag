@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AnimatedIconMemo } from './animated-icon';
+import { AnimatedIconMemo } from './Animated-Icon';
 
 const AnimatedContent = ({ header, desc, animation, iconWidth, iconHeight }) => {
 

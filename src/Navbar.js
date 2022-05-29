@@ -1,28 +1,25 @@
-import React, { Component } from "react";
-// import { animateScroll as scroll, Link } from 'react-scroll';
+import React from "react";
 import { Link } from "react-router-dom";
-import { AnimatedIconMemo } from "./components/animated-icon";
+import { AnimatedIconMemo } from "./components/Animated-Icon";
 import logo from "./images/awag-logo-1.png";
 import financialIcon from "./images/financial-consulting.json";
 import insuranceIcon from "./images/insurance.json";
 import marketingIcon from "./images/marketing.json";
 
-export default class Navbar extends Component {
-  render() {
-    return (
-      <nav className="nav" id="navbar">
-        <div className="nav-content">
-          <Link activeClass="active" to="/financial">
-            <img src={logo} className="nav-logo" alt="Logo" />
+export const Navbar = () => {
+  return (
+    <nav className="nav" id="navbar">
+      <div className="nav-content">
+        <Link activeClass="active" to="/financial">
+          <img src={logo} className="nav-logo" alt="Logo" />
+        </Link>
+
+        <ul className="nav-items">
+          <Link activeClass="active" to="">
+            Other Services
           </Link>
 
-          <ul className="nav-items">
-            <li className="nav-item dropdown">
-              <Link activeClass="active" to="">
-                Other Services
-              </Link>
-            </li>
-
+          <li className="nav-item dropdown">
             {/* Other services dropdown menu */}
             <div className="dropdown-menu" id="drop">
               <Link className="dm-item" activeClass="active" to="">
@@ -58,21 +55,21 @@ export default class Navbar extends Component {
                 Insurance
               </Link>
             </div>
+          </li>
 
-            <li className="nav-item">
-              <Link to="/blog">Blog</Link>
-            </li>
+          <li className="nav-item">
+            <Link to="/blog">Blog</Link>
+          </li>
 
-            <li className="nav-item">
-              <Link to="/contact">Contact us</Link>
-            </li>
+          <li className="nav-item">
+            <Link to="/contact">Contact us</Link>
+          </li>
 
-            <li className="nav-item">
-              <Link to="/register">Login</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    );
-  }
-}
+          <li className="nav-item">
+            <Link to="/register">Login</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  );
+};

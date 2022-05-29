@@ -20,11 +20,7 @@ const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData }) => {
   }, []);
 
   return (
-    <LottieIcon
-      ref={ref}
-      iconWidth={iconWidth}
-      iconHeight={iconHeight}
-    ></LottieIcon>
+    <LottieIcon ref={ref} iconWidth={iconWidth} iconHeight={iconHeight}></LottieIcon>
   );
 };
 

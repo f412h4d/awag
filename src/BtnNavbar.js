@@ -50,20 +50,20 @@ export const BtnNavbar = () => {
   };
 
   return (
-    <div class='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
-      <button class='nav-trigger'>
+    <div className='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
+      <button className='nav-trigger'>
         {/* Play Animation For Hover Too */}
         <LottieIcon onClick={playOnClick} ref={ref}></LottieIcon>
       </button>
 
       {/* FIXME change this into styled componen to fix the flashing (no animation when clicking) */}
       {!isHidden && (
-        <div class='btn-nav-items'>
-          <div class='btn-nav-item'>item1</div>
+        <div className='btn-nav-items'>
+          <div className='btn-nav-item'>item1</div>
 
-          <div class='btn-nav-item'>item2</div>
+          <div className='btn-nav-item'>item2</div>
 
-          <div class='btn-nav-item'>item3</div>
+          <div className='btn-nav-item'>item3</div>
         </div>
       )}
     </div>

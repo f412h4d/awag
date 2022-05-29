@@ -2,6 +2,26 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 const Contact = () => {
+  return (
+    <Container>
+      <ContactContent>
+        <ContactAnimation>
+          {/* animation 170x170 px */}
+          <img src="https://via.placeholder.com/170"></img>
+        </ContactAnimation>
+
+        <ContactTitle>
+        BECOME A PIONEER OF THE DIGITAL ECONOMY!
+        </ContactTitle>
+
+        <ContactBtn>
+          Contact
+        </ContactBtn>
+      </ContactContent>
+    </Container>
+  );
+};
+
   const Container = styled.div`
     display: flex;
     justify-content: center;
@@ -45,26 +65,5 @@ const Contact = () => {
 
     cursor: pointer;
   `;
-
-
-  return (
-    <Container>
-      <ContactContent>
-        <ContactAnimation>
-          {/* animation 170x170 px */}
-          <img src="https://via.placeholder.com/170"></img>
-        </ContactAnimation>
-
-        <ContactTitle>
-        BECOME A PIONEER OF THE DIGITAL ECONOMY!
-        </ContactTitle>
-
-        <ContactBtn>
-          Contact
-        </ContactBtn>
-      </ContactContent>
-    </Container>
-  );
-};
 
 export const ContactMemo = React.memo(Contact);

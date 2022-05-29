@@ -141,7 +141,9 @@ const Footer = () => {
           IMPRINT &nbsp;&nbsp;|&nbsp;&nbsp; DATA PROTECTION &nbsp;&nbsp;|&nbsp;&nbsp;
           AFFILIATES &nbsp;&nbsp;|&nbsp;&nbsp; JOB AND CAREER
         </p>
-        <CopyRightText>Copyright ©️ AWAG Financial – All rights reserved</CopyRightText>
+        <CopyRightText>
+          Copyright <span role='img'>©</span> ️ AWAG Financial – All rights reserved
+        </CopyRightText>
       </CopyRightSection>
     </Container>
   );

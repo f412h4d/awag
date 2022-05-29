@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
+import { AnimatedIconMemo } from '../../components/Animated-Icon';
+import financialAnalysis from '../../images/financial-analysis-by-employer.json';
 
 const Contact = () => {
   return (
     <Container>
       <ContactContent>
         <ContactAnimation>
-          <img src='https://via.placeholder.com/170'></img>
+          <AnimatedIconMemo
+            iconHeight={'170px'}
+            iconWidth={'170px'}
+            animationData={financialAnalysis}
+          />
         </ContactAnimation>
 
         <ContactTitle>BECOME A PIONEER OF THE DIGITAL ECONOMY!</ContactTitle>

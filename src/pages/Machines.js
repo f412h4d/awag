@@ -1,46 +1,46 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { AnimatedButtonMemo } from "../components/Animated-Button";
-import sendIcon from "../images/send.json";
-import android from "../images/android-app-store-png-app-store-and-android2.png";
-import ios from "../images/android-app-store-png-app-store-and-android1.png";
-import bitAtm from "../images/bit_ATM1.png";
-import hand from "../images/hands.jpg";
-import InfoTable from "../components/InfoTable";
-import grayAtm from "../images/atm-gray.jpg";
-import bitcoin from "../images/crypto-contact-icon-bitcoin-1.png";
-import etherium from "../images/crypto-contact-icon-2.png";
-import dash from "../images/crypto-contact-icon-dash.png";
-import litecoin from "../images/crypto-contact-icon-litecoin.png";
-import eth from "../images/crypto-contact-icon-eth-classic.png";
-import last from "../images/last.jpg";
-import atm from "../images/atmicon.png";
-import config from "../images/configurationicon.png";
-import ad from "../images/advertisementicon.png";
-import business from "../images/business-ideaicon.png";
-import { FooterMemo } from "../components/Footer";
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { AnimatedButtonMemo } from '../components/Animated-Button';
+import { FooterMemo } from '../components/Footer';
+import InfoTable from '../components/InfoTable';
+import ad from '../images/advertisementicon.png';
+import ios from '../images/android-app-store-png-app-store-and-android1.png';
+import android from '../images/android-app-store-png-app-store-and-android2.png';
+import grayAtm from '../images/atm-gray.jpg';
+import atm from '../images/atmicon.png';
+import bitAtm from '../images/bit_ATM1.png';
+import business from '../images/business-ideaicon.png';
+import config from '../images/configurationicon.png';
+import etherium from '../images/crypto-contact-icon-2.png';
+import bitcoin from '../images/crypto-contact-icon-bitcoin-1.png';
+import dash from '../images/crypto-contact-icon-dash.png';
+import eth from '../images/crypto-contact-icon-eth-classic.png';
+import litecoin from '../images/crypto-contact-icon-litecoin.png';
+import hand from '../images/hands.jpg';
+import last from '../images/last.jpg';
+import sendIcon from '../images/send.json';
 
 const Machines = () => {
   const [toggleTabs, setToggleTabs] = useState(true);
-  const [oneWay, setOneWay] = useState({
-    features: "Purchase of cryptocurrencies",
-    display: "7 inches (17.8 cm)",
-    size: "32 x 38 x 27 cm",
-    lang: "German English",
-    montage: "wall mounting",
-    weight: "ca. 23 kg",
-    energy: "20 Watt",
-    precondition: "Internet and electricity connection",
+  const [oneWay] = useState({
+    features: 'Purchase of cryptocurrencies',
+    display: '7 inches (17.8 cm)',
+    size: '32 x 38 x 27 cm',
+    lang: 'German English',
+    montage: 'wall mounting',
+    weight: 'ca. 23 kg',
+    energy: '20 Watt',
+    precondition: 'Internet and electricity connection',
   });
-  const [twoWay, setTwoWay] = useState({
-    features: "Buying and selling cryptocurrencies",
-    display: "23 inches (58.4 cm)",
-    size: "62 x 180 x 46 cm",
-    lang: "German English",
-    montage: "stand",
-    weight: "ca. 105 kg",
-    energy: "40 Watt",
-    precondition: "Internet and electricity connection",
+  const [twoWay] = useState({
+    features: 'Buying and selling cryptocurrencies',
+    display: '23 inches (58.4 cm)',
+    size: '62 x 180 x 46 cm',
+    lang: 'German English',
+    montage: 'stand',
+    weight: 'ca. 105 kg',
+    energy: '40 Watt',
+    precondition: 'Internet and electricity connection',
   });
 
   return (
@@ -51,24 +51,24 @@ const Machines = () => {
           <SecondTitle>Become a presenter!</SecondTitle>
           <Text>
             Do you have an interesting location and are you interested in
-            cryptocurrencies? Give your customers the opportunity to
-            conveniently buy digital currencies. We would be happy to equip you
-            with one of our Bitcoin ATMs.
+            cryptocurrencies? Give your customers the opportunity to conveniently buy
+            digital currencies. We would be happy to equip you with one of our Bitcoin
+            ATMs.
           </Text>
           <AnimatedButtonMemo
-            text={"Send Reqeust"}
-            iconHeight={"2rem"}
-            iconWidth={"2rem"}
+            text={'Send Reqeust'}
+            iconHeight={'2rem'}
+            iconWidth={'2rem'}
             animationData={sendIcon}
           />
           <Space />
           <SecondTitle>Bitcoin ATM Map mobile apps</SecondTitle>
           <DownloadWrapper>
-            <a href="https://play.google.com/store/apps/details?id=com.coinatmradar.android&amp;hl=en">
-              <AndroidImage src={android} alt="" />
+            <a href='https://play.google.com/store/apps/details?id=com.coinatmradar.android&amp;hl=en'>
+              <AndroidImage src={android} alt='' />
             </a>
-            <a href="https://itunes.apple.com/us/app/coinatmradar/id944855781">
-              <IosImage src={ios} alt="" />
+            <a href='https://itunes.apple.com/us/app/coinatmradar/id944855781'>
+              <IosImage src={ios} alt='' />
             </a>
           </DownloadWrapper>
         </ChildSection>
@@ -78,31 +78,27 @@ const Machines = () => {
       <InfoSection>
         <ChildSection>
           <TitleOne>
-            Do you have an ideal location and are you interested in
-            cryptocurrencies?
+            Do you have an ideal location and are you interested in cryptocurrencies?
           </TitleOne>
           <Text>
-            Become a presenter! All you need is a basic power and internet
-            connection and a high traffic location. You give your customers the
-            opportunity to conveniently buy digital currencies. We provide you
-            with a high-quality Bitcoin machine for FREE.
+            Become a presenter! All you need is a basic power and internet connection and
+            a high traffic location. You give your customers the opportunity to
+            conveniently buy digital currencies. We provide you with a high-quality
+            Bitcoin machine for FREE.
           </Text>
           <BlackSecondTitle>your benefits</BlackSecondTitle>
           <BenefitList>
             <Benefits>
-              You appear modern and future-oriented, at the same time you
-              conquer a new customer segment and still earn money with it.
+              You appear modern and future-oriented, at the same time you conquer a new
+              customer segment and still earn money with it.
             </Benefits>
+            <Benefits>Location optimization and increase in customer frequency</Benefits>
             <Benefits>
-              Location optimization and increase in customer frequency
-            </Benefits>
-            <Benefits>
-              Competitive advantage for your business, regardless of the
-              industry.
+              Competitive advantage for your business, regardless of the industry.
             </Benefits>
             <Benefits>Profit Sharing & Support of ATMS</Benefits>
           </BenefitList>
-          <HandImage src={hand} alt="" />
+          <HandImage src={hand} alt='' />
         </ChildSection>
         <TabsWrapper>
           <TabButtonsWrapper>
@@ -136,35 +132,32 @@ const Machines = () => {
           <TitleOne>Become a sales partner of Bitcoin ATMs</TitleOne>
           <Text>
             The uncertain economic situation increases people's need to have an
-            alternative to cash as a reserve. The desire for financial security
-            and security plays a major role. Cryptocurrencies have become a
-            popular investment in recent years.
+            alternative to cash as a reserve. The desire for financial security and
+            security plays a major role. Cryptocurrencies have become a popular investment
+            in recent years.
           </Text>
           <TitleOne>Cryptocurrencies are trending</TitleOne>
           <Text>
-            Among the cryptocurrencies, Bitcoin is the most popular. What
-            initially seemed alien to most people now enjoys relatively broad
-            acceptance across all social classes. The ever-increasing trust in
-            cryptocurrencies lies in the nature of this currency, it is
-            decentralized, extremely secure thanks to blockchain and guarantees
-            anonymity when making payments. More and more shops are now
-            accepting cryptocurrencies as payment methods, which only benefits
-            this digital form of currency even more.
+            Among the cryptocurrencies, Bitcoin is the most popular. What initially seemed
+            alien to most people now enjoys relatively broad acceptance across all social
+            classes. The ever-increasing trust in cryptocurrencies lies in the nature of
+            this currency, it is decentralized, extremely secure thanks to blockchain and
+            guarantees anonymity when making payments. More and more shops are now
+            accepting cryptocurrencies as payment methods, which only benefits this
+            digital form of currency even more.
           </Text>
           <TitleOne>
             Bitcoin Automat as an entry aid for those interested in Bitcoin
           </TitleOne>
           <Text>
-            With the increasing popularity of Bitcoins & Co, many people are
-            wondering how they can acquire them. For the layman, entering the
-            world of cryptocurrencies is rather difficult. It is not uncommon
-            for registration to be required in online exchanges, which sometimes
-            require complicated procedures for acquiring digital currencies. Of
-            course, that quickly puts you off. The solution to the problem is a
-            Bitcoin machine that makes it easy for anyone interested to get
-            started. Buying and selling cryptocurrencies quickly, easily and
-            securely, e.g. B. Bitcoin, Litecoin, Ether, DASH or Bitcoin Cash is
-            thus possible.
+            With the increasing popularity of Bitcoins & Co, many people are wondering how
+            they can acquire them. For the layman, entering the world of cryptocurrencies
+            is rather difficult. It is not uncommon for registration to be required in
+            online exchanges, which sometimes require complicated procedures for acquiring
+            digital currencies. Of course, that quickly puts you off. The solution to the
+            problem is a Bitcoin machine that makes it easy for anyone interested to get
+            started. Buying and selling cryptocurrencies quickly, easily and securely,
+            e.g. B. Bitcoin, Litecoin, Ether, DASH or Bitcoin Cash is thus possible.
           </Text>
         </ChildSection>
       </ParentSection>
@@ -200,36 +193,34 @@ const Machines = () => {
               <TinyTitle>ATM</TinyTitle>
               <TinyImage src={atm} />
               <Text>
-                We only use the latest generation of Bitcoin ATMs, which are
-                easy to use and easy to use. With AWAG Financial you have a
-                reliable partner in the background, because the satisfaction of
-                our customers is important to us.
+                We only use the latest generation of Bitcoin ATMs, which are easy to use
+                and easy to use. With AWAG Financial you have a reliable partner in the
+                background, because the satisfaction of our customers is important to us.
               </Text>
             </LastChild>
             <LastChild>
               <TinyTitle>Installation</TinyTitle>
               <TinyImage src={config} />
               <Text>
-                We build and install the latest generation of ATM Bitcoin
-                machines that guarantee convenient operation and make buying
-                digital currencies child's play.
+                We build and install the latest generation of ATM Bitcoin machines that
+                guarantee convenient operation and make buying digital currencies child's
+                play.
               </Text>
             </LastChild>
             <LastChild>
               <TinyTitle>Brandmarketing</TinyTitle>
               <TinyImage src={ad} />
               <Text>
-                As a BTM sales partner, your location or your company will
-                receive marketing support in the form of increased visibility on
-                the web.
+                As a BTM sales partner, your location or your company will receive
+                marketing support in the form of increased visibility on the web.
               </Text>
             </LastChild>
             <LastChild>
               <TinyTitle>requirements</TinyTitle>
               <TinyImage src={business} />
               <Text>
-                ATM bitcoin machines only need electricity (230V) including a
-                stable internet connection.
+                ATM bitcoin machines only need electricity (230V) including a stable
+                internet connection.
               </Text>
             </LastChild>
           </LastSectionChildWrapper>
@@ -259,8 +250,7 @@ const ParentSection = styled.div`
   justify-content: space-around;
   align-items: center;
   padding-top: 50px;
-  ${(props) =>
-    props.background ? "background : #94e5cf ;" : "background:#ededed;"}
+  ${(props) => (props.background ? 'background : #94e5cf ;' : 'background:#ededed;')}
 `;
 const ChildSection = styled.div`
   width: 47.5%;

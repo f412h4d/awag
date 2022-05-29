@@ -1,8 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AnimatedIconMemo } from './animated-icon';
+import { AnimatedIconMemo } from './Animated-Icon';
 
 const AnimatedContent = ({ header, desc, animation, iconWidth, iconHeight }) => {
+
+  return (
+    <Container>
+      <MainTextContainer>
+        <MainText>{header}</MainText>
+        <DescText>{desc}</DescText>
+      </MainTextContainer>
+
+      <MainAnimationContainer>
+        <AnimatedIconMemo
+          loop={true}
+          iconWidth={iconWidth !== null ? iconWidth : '550px'}
+          iconHeight={iconHeight !== null ? iconHeight : '550px'}
+          animationData={animation}
+        ></AnimatedIconMemo>
+      </MainAnimationContainer>
+    </Container>
+  );
+};
+
   const Container = styled.main`
     flex: 1;
     display: flex;
@@ -45,24 +65,5 @@ const AnimatedContent = ({ header, desc, animation, iconWidth, iconHeight }) => 
 
     padding-right: 100px;
   `;
-
-  return (
-    <Container>
-      <MainTextContainer>
-        <MainText>{header}</MainText>
-        <DescText>{desc}</DescText>
-      </MainTextContainer>
-
-      <MainAnimationContainer>
-        <AnimatedIconMemo
-          loop={true}
-          iconWidth={iconWidth !== null ? iconWidth : '550px'}
-          iconHeight={iconHeight !== null ? iconHeight : '550px'}
-          animationData={animation}
-        ></AnimatedIconMemo>
-      </MainAnimationContainer>
-    </Container>
-  );
-};
 
 export const AnimatedContentMemo = React.memo(AnimatedContent);

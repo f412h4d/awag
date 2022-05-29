@@ -6,8 +6,10 @@ import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';
 import software from '../../images/software.json';
 import team from '../../images/teamwork.json';
+import { ContactMemo } from './Financial-Contact';
 import { FinancialHeaderMemo } from './Financial-Header';
 import { FinancialServicesMemo } from './Financial-Services';
+import { StatsMemo } from './Financial-Stats';
 
 const Financial = () => {
   const Container = styled.div`
@@ -24,6 +26,8 @@ const Financial = () => {
       <FinancialHeaderMemo></FinancialHeaderMemo>
 
       <FinancialServicesMemo></FinancialServicesMemo>
+
+      <ContactMemo></ContactMemo>
 
       <AnimatedContentMemo
         header={'Consulting & Development'}
@@ -64,6 +68,8 @@ const Financial = () => {
         iconWidth={'650px'}
         iconHeight={'650px'}
       ></AnimatedContentMemo>
+
+      <StatsMemo></StatsMemo>
 
       <FooterMemo></FooterMemo>
     </Container>

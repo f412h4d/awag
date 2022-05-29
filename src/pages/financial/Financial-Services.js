@@ -40,6 +40,7 @@ const FinancialServices = () => {
       <h2>Our Services</h2>
       <ServicesContainer>
         <ServiceMemo
+          link={'/atm'}
           image={atmImage}
           title={'ATM'}
           description={
@@ -47,6 +48,7 @@ const FinancialServices = () => {
           }
         ></ServiceMemo>
         <ServiceMemo
+          link={'/machines'}
           image={bitcoinMachine}
           title={'Bitcoin Machines'}
           description={
@@ -54,6 +56,7 @@ const FinancialServices = () => {
           }
         ></ServiceMemo>
         <ServiceMemo
+          link={'/transfer'}
           image={moneyTransfer}
           title={'Money Transfer'}
           description={

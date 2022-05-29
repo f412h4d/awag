@@ -92,8 +92,8 @@ function Page({
                 <div className='hero-image girl'>
                   <AnimatedIconMemo
                     loop={true}
-                    iconWidth={'600px'}
-                    iconHeight={'600px'}
+                    iconWidth={'650px'}
+                    iconHeight={'650px'}
                     animationData={animation}
                   ></AnimatedIconMemo>
                 </div>

@@ -10,19 +10,17 @@ export const Navbar = () => {
   return (
     <nav className="nav" id="navbar">
       <div className="nav-content">
-        <Link activeClass="active" to="/financial">
+        <Link to="/financial">
           <img src={logo} className="nav-logo" alt="Logo" />
         </Link>
 
         <ul className="nav-items">
           <li className="nav-item dropdown">
-            <Link activeClass="active" to="">
-              Other Services
-            </Link>
+            <Link to="">Other Services</Link>
 
             {/* Other services dropdown menu */}
             <div className="dropdown-menu" id="drop">
-              <Link className="dm-item" activeClass="active" to="">
+              <Link className="dm-item" to="">
                 <AnimatedIconMemo
                   loop={true}
                   autoplay={true}
@@ -33,7 +31,7 @@ export const Navbar = () => {
                 Financial
               </Link>
 
-              <Link className="dm-item" activeClass="active" to="">
+              <Link className="dm-item" to="">
                 <AnimatedIconMemo
                   loop={true}
                   autoplay={true}
@@ -44,7 +42,7 @@ export const Navbar = () => {
                 Marketing
               </Link>
 
-              <Link className="dm-item" activeClass="active" to="">
+              <Link className="dm-item" to="">
                 <AnimatedIconMemo
                   loop={true}
                   autoplay={true}

@@ -6,7 +6,6 @@ const Contact = () => {
     <Container>
       <ContactContent>
         <ContactAnimation>
-          {/* animation 170x170 px */}
           <img src='https://via.placeholder.com/170'></img>
         </ContactAnimation>
 

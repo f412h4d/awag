@@ -15,11 +15,11 @@ export const Navbar = () => {
         </Link>
 
         <ul className="nav-items">
-          <Link activeClass="active" to="">
-            Other Services
-          </Link>
-
           <li className="nav-item dropdown">
+            <Link activeClass="active" to="">
+              Other Services
+            </Link>
+
             {/* Other services dropdown menu */}
             <div className="dropdown-menu" id="drop">
               <Link className="dm-item" activeClass="active" to="">

@@ -83,18 +83,18 @@ html body {
   height: 0;
   width: 100%;
 
-  padding: 1rem 4rem;
+  padding: 0rem 4rem;
   top: 80px; 
 
   opacity: 0;
 
-  transition:height .4s ease-in-out, opacity .6s, width .1s;
+  transition:height .4s ease-in-out, padding .4s ease-in-out, opacity .6s, width .1s;
 }
 
-.dropdown:hover + .dropdown-menu,
-.dropdown-menu:hover {
+.dropdown:hover .dropdown-menu {
   height: 20rem;
   opacity: 1;
+  padding: 1rem 4rem;
 }
 
 .dm-item {

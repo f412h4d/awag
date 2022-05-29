@@ -1,7 +1,7 @@
 import { Power3, TimelineLite, TweenMax } from 'gsap';
 import React, { useEffect, useRef } from 'react';
 import './App.css';
-import { AnimatedIconMemo } from './components/animated-icon';
+import { AnimatedIconMemo } from './components/Animated-Icon';
 import arrow from './images/arrow-right.svg';
 
 function Page({

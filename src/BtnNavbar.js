@@ -59,8 +59,8 @@ export const BtnNavbar = () => {
   };
 
   return (
-    <div class='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
-      <button class='nav-trigger'>
+    <div className='btn-nav' onClick={onBlur} onMouseLeave={() => setHidden(false)}>
+      <button className='nav-trigger'>
         {/* Play Animation For Hover Too */}
         <LottieIcon onClick={playOnClick} ref={ref}></LottieIcon>
       </button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AnimatedButtonMemo } from '../../components/Animated-Button';
-import { AnimatedIconMemo } from '../../components/animated-icon';
+import { AnimatedIconMemo } from '../../components/Animated-Icon';
 import sendIcon from '../../images/send.json';
 import financial from '../../images/services.json';
 

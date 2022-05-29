@@ -33,8 +33,7 @@ const Container = styled.div`
 
   width: 100%;
   height: 100%;
-  min-height: 490px;
-  max-height: 490px;
+  
   border-radius: 0.4rem;
 
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
@@ -42,9 +41,9 @@ const Container = styled.div`
 `;
 
 const ServiceImage = styled.img`
-  height: 50%;
-  width: 100%;
-  border-radius: 6px;
+  height: 375px;
+  width: 375px;
+  border-radius:  0.4rem;
 `;
 
 // todo

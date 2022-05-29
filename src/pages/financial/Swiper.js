@@ -13,7 +13,7 @@ import software from '../../images/software.json';
 const SwiperContent = () => {
   const Container = styled.div`
     width: 100vw;
-    min-height: calc(100vh - 80px);
+    height: 600px;
 
     background-color: #f4f4f4;
   `;

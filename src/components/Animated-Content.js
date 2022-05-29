@@ -31,7 +31,7 @@ const AnimatedContent = ({ header, desc, animation, iconWidth, iconHeight }) => 
     align-items: center;
     justify-content: center;
 
-    min-height: calc(100vh - 80px);
+    height: 600px;
     width: 100%;
     padding: 20px 100px;
   `;

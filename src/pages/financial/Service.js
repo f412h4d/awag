@@ -8,7 +8,7 @@ const Service = ({ image, title, description }) => {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     width: 100%;
     height: 100%;

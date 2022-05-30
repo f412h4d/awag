@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import branch from "../../images/branch.png";
-import coronavirus from "../../images/coronavirus.png";
-import moneyTtransfer from "../../images/money-transfer.png";
-import receipt from "../../images/receipt.png";
+import React from 'react';
+import styled from 'styled-components';
+import branch from '../../images/branch.png';
+import coronavirus from '../../images/coronavirus.png';
+import moneyTtransfer from '../../images/money-transfer.png';
+import receipt from '../../images/receipt.png';
 
 const Stats = () => {
   return (
@@ -43,6 +43,8 @@ const Stats = () => {
           <StatTitle>Customers worldwide</StatTitle>
         </StatCard>
       </StatsCards>
+
+      <Border />
     </Container>
   );
 };
@@ -107,6 +109,15 @@ const StatTitle = styled.div`
   margin-bottom: 50px;
 
   font-weight: 700;
+`;
+
+const Border = styled.hr`
+  width: 80%;
+  min-width: 1200px;
+  height: 1px;
+  border: none;
+  background-color: #e6e6e6;
+  margin-top: 2rem;
 `;
 
 export const StatsMemo = React.memo(Stats);

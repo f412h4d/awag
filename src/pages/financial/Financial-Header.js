@@ -61,6 +61,8 @@ const Container = styled.main`
     min-height: calc(100vh - 80px);
     width: 100%;
     padding: 20px 100px;
+
+    background-color: #e2fff7;
   `;
 
   const MainTextContainer = styled.div`

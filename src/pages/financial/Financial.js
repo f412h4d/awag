@@ -17,7 +17,6 @@ const Financial = () => {
 
     width: 100%;
     height: 100%;
-    background-color: #e2fff7;
   `;
 
   return (

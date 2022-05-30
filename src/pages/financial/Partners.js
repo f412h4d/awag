@@ -1,120 +1,30 @@
 import React from 'react';
-import '../../App.scss';
+import styled from 'styled-components';
+import { PartnersSlider } from './PartnersSlider';
 
 export const Partners = () => {
   return (
-    <div className='partners-container'>
-      <div className='slider'>
-        <div className='slide-track'>
-          <div className='slide'>
-            <img src='/src/images/partners/index.png' height='100' width='250' alt='' />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-          <div className='slide'>
-            <img
-              src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png'
-              height='100'
-              width='250'
-              alt=''
-            />
-          </div>
-        </div>
-      </div>
-    </div>
+    <PartnersSection>
+      <PartnersTitle>Our Partners</PartnersTitle>
+
+      <PartnersSlider />
+    </PartnersSection>
   );
 };
+
+const PartnersSection = styled.section`
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 50px 0;
+`;
+
+const PartnersTitle = styled.h2`
+  margin: 50px 0;
+  color: #333;
+
+  letter-spacing: 2px;
+  font-weight: bold;
+`;

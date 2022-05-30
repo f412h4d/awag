@@ -7,6 +7,7 @@ import { ContactMemo } from './Financial-Contact';
 import { FinancialHeaderMemo } from './Financial-Header';
 import { FinancialServicesMemo } from './Financial-Services';
 import { StatsMemo } from './Financial-Stats';
+import { Partners } from './Partners';
 import { SwiperMemo } from './Swiper';
 
 const Financial = () => {
@@ -40,6 +41,8 @@ const Financial = () => {
       ></AnimatedContentMemo>
 
       <StatsMemo></StatsMemo>
+
+      <Partners></Partners>
 
       <FooterMemo></FooterMemo>
     </Container>

@@ -1,13 +1,10 @@
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { AnimatedButtonMemo } from '../../components/Animated-Button';
 import { AnimatedIconMemo } from '../../components/Animated-Icon';
 import sendIcon from '../../images/send.json';
 import financial from '../../images/services.json';
-
-gsap.registerPlugin(ScrollTrigger);
 
 const FinancialHeader = () => {
 
@@ -18,9 +15,9 @@ const FinancialHeader = () => {
       {x: 0, opacity: 1, duration: 1 });
   };
 
-  const animationRef = useRef();
+  const picRef = useRef();
   useEffect(() => {
-    animate(animationRef, 400)
+    animate(picRef, 400)
   });
 
   const textRef = useRef();
@@ -41,7 +38,7 @@ const FinancialHeader = () => {
         />
       </MainTextContainer>
 
-      <MainAnimationContainer ref={animationRef}>
+      <MainAnimationContainer ref={picRef}>
         <AnimatedIconMemo
           loop={true}
           iconWidth={'550px'}

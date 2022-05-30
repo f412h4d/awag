@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
+import { AWAGMap } from '../components/Map';
 import contact from '../images/employees-doing-discussion-about-work-progress.json';
 import gpsImage from '../images/gps.png';
 import phoneImage from '../images/phone.svg';
@@ -99,6 +100,16 @@ const ContactUs = () => {
           </Box>
         </Wrapper>
       </WrapperRow>
+
+      <MapContainer>
+        <AddressBox>
+          Seidengasse 45
+          <br />
+          Seidengasse 45, 1070 Wien, Austria
+        </AddressBox>
+
+        <AWAGMap></AWAGMap>
+      </MapContainer>
     </Container>
   );
 };
@@ -112,10 +123,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-`;
-const Title = styled.h1`
-  font-size: 34px;
-  margin-top: 90px;
 `;
 
 const Wrapper = styled.div`
@@ -240,4 +247,25 @@ const Submit = styled.input`
   &:hover {
     box-shadow: 0 1px 1px 1px rgba(#aaa, 0.6);
   }
+`;
+
+const MapContainer = styled.section`
+  width: 100%;
+  height: 450px;
+`;
+
+const AddressBox = styled.p`
+  position: relative;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 10px;
+  width: 290px;
+  height: auto;
+  display: block;
+  top: 140px;
+  z-index: 10;
+  left: 25px;
+}
 `;

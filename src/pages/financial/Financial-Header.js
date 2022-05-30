@@ -1,12 +1,59 @@
-import React from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { AnimatedButtonMemo } from '../../components/Animated-Button';
 import { AnimatedIconMemo } from '../../components/Animated-Icon';
 import sendIcon from '../../images/send.json';
 import financial from '../../images/services.json';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const FinancialHeader = () => {
-  const Container = styled.main`
+
+  const animate = (boxName, primerx) => {
+    gsap.fromTo(
+      boxName.current,
+      {x: primerx, opacity: 0},
+      {x: 0, opacity: 1, duration: 1 });
+  };
+
+  const animationRef = useRef();
+  useEffect(() => {
+    animate(animationRef, 400)
+  });
+
+  const textRef = useRef();
+  useEffect(() => {
+    animate(textRef, -400)
+  });
+
+  return (
+    <Container>
+      <MainTextContainer ref={textRef}>
+        <MainText>We help you focus on growth and value creation</MainText>
+
+        <AnimatedButtonMemo
+          text={'Send Reqeust'}
+          iconHeight={'2rem'}
+          iconWidth={'2rem'}
+          animationData={sendIcon}
+        />
+      </MainTextContainer>
+
+      <MainAnimationContainer ref={animationRef}>
+        <AnimatedIconMemo
+          loop={true}
+          iconWidth={'550px'}
+          iconHeight={'550px'}
+          animationData={financial}
+        ></AnimatedIconMemo>
+      </MainAnimationContainer>
+    </Container>
+  );
+};
+
+const Container = styled.main`
     flex: 1;
     display: flex;
     flex-direction: row;
@@ -43,30 +90,5 @@ const FinancialHeader = () => {
 
     padding-right: 100px;
   `;
-
-  return (
-    <Container>
-      <MainTextContainer>
-        <MainText>We help you focus on growth and value creation</MainText>
-
-        <AnimatedButtonMemo
-          text={'Send Reqeust'}
-          iconHeight={'2rem'}
-          iconWidth={'2rem'}
-          animationData={sendIcon}
-        />
-      </MainTextContainer>
-
-      <MainAnimationContainer>
-        <AnimatedIconMemo
-          loop={true}
-          iconWidth={'550px'}
-          iconHeight={'550px'}
-          animationData={financial}
-        ></AnimatedIconMemo>
-      </MainAnimationContainer>
-    </Container>
-  );
-};
 
 export const FinancialHeaderMemo = React.memo(FinancialHeader);

@@ -24,11 +24,13 @@ const Contact = () => {
       }, {
         scrollTrigger: {
           trigger: containerRef.current,
-          toggleActions: "restart none reverse none"
+          toggleActions: "restart none reverse none",
+          start: '-60% 15%',
+          end: '110% 95%'
         },
         x: 0,
         opacity: 1,
-        duration: 1
+        duration: .4
     });
   };
 
@@ -36,12 +38,12 @@ const Contact = () => {
 
   const picRef = useRef();
   useEffect(() => {
-    animate(picRef, -100)
+    animate(picRef, -200)
   });
 
   const textRef = useRef();
   useEffect(() => {
-    animate(textRef, 100)
+    animate(textRef, 200)
   });
 
   return (

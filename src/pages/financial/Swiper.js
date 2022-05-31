@@ -1,4 +1,6 @@
-import React from 'react';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper';
 import 'swiper/modules/navigation/navigation.min.css';
@@ -10,16 +12,36 @@ import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';
 import software from '../../images/software.json';
 
-const SwiperContent = () => {
-  const Container = styled.div`
-    width: 100vw;
-    height: 600px;
+gsap.registerPlugin(ScrollTrigger);
 
-    background-color: #f4f4f4;
-  `;
+const SwiperContent = () => {
+
+  const containerRef = useRef();
+
+  useEffect( () => {
+    gsap.fromTo(
+      containerRef.current,
+      {
+        y: 500,
+        opacity: 0,
+      }, {
+        scrollTrigger: {
+          trigger: Container.current,
+          toggleActions: 'restart none reverse none',
+          markers: true,
+          start: '200% center',
+          end: '0 center'
+        },
+        y: 0,
+        opacity: 1,
+        duration: .6
+      }
+    )
+  });
+
 
   return (
-    <Container>
+    <Container ref={containerRef}>
       <Swiper
         pagination={{
           clickable: true,
@@ -71,5 +93,12 @@ const SwiperContent = () => {
     </Container>
   );
 };
+
+const Container = styled.div`
+    width: 100vw;
+    height: 600px;
+
+    background-color: #f4f4f4;
+  `;
 
 export const SwiperMemo = React.memo(SwiperContent);

@@ -41,8 +41,8 @@ const Container = styled.div`
 `;
 
 const ServiceImage = styled.img`
-  height: 375px;
-  width: 375px;
+  height: 320px;
+  width: 320px;
   border-radius:  0.4rem;
 `;
 
@@ -50,7 +50,7 @@ const ServiceImage = styled.img`
 // const ContentWraper = styled.div``;
 const ServiceDesc = styled.p`
   //  FIXME remove and make a wrapper with flex grow
-  min-height: 60px;
+  min-height: 85px;
   color: #9e9ea4;
   font-size: 0.8rem;
   text-align: center;

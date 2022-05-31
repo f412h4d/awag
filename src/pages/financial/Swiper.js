@@ -28,7 +28,6 @@ const SwiperContent = () => {
         scrollTrigger: {
           trigger: Container.current,
           toggleActions: 'restart none reverse none',
-          markers: true,
           start: '200% center',
           end: '0 center'
         },

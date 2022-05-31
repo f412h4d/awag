@@ -28,7 +28,6 @@ useEffect(() => {
       scrollTrigger: {
         trigger: contentRef.current,
         toggleActions: 'restart none reverse none',
-        markers:true,
         start: '0 center',
         end: '0 center'
       },

@@ -22,18 +22,19 @@ const SwiperContent = () => {
     gsap.fromTo(
       containerRef.current,
       {
-        y: 500,
+        y: 150,
         opacity: 0,
       }, {
         scrollTrigger: {
-          trigger: Container.current,
+          trigger: containerRef.current,
           toggleActions: 'restart none reverse none',
-          start: '200% center',
-          end: '0 center'
+          start: '-20% center',
+          end: '-20% center',
+          markers: true
         },
         y: 0,
         opacity: 1,
-        duration: .6
+        duration: .4
       }
     )
   });

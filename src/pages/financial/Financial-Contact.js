@@ -25,8 +25,8 @@ const Contact = () => {
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart none reverse none",
-          start: '-60% 15%',
-          end: '110% 95%'
+          start: '5% center',
+          end: '5% center'
         },
         x: 0,
         opacity: 1,

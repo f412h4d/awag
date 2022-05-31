@@ -29,8 +29,7 @@ const SwiperContent = () => {
           trigger: containerRef.current,
           toggleActions: 'restart none reverse none',
           start: '-20% center',
-          end: '-20% center',
-          markers: true
+          end: '-20% center'
         },
         y: 0,
         opacity: 1,

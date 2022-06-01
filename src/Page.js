@@ -1,5 +1,5 @@
 import { Power3, TimelineLite, TweenMax } from 'gsap';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useMemo, useRef } from 'react';
 import './App.css';
 import { AnimatedIconMemo } from './components/Animated-Icon';
 import arrow from './images/arrow-right.svg';
@@ -16,7 +16,7 @@ function Page({
   let app = useRef(null);
   let images = useRef(null);
   let content = useRef(null);
-  let tl = new TimelineLite({ delay: 0.8 });
+  const tl = useMemo(() => new TimelineLite({ delay: 0.8 }), []);
 
   useEffect(() => {
     // Images Vars

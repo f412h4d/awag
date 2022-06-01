@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Autoplay, Navigation, Pagination } from 'swiper';
-import 'swiper/modules/navigation/navigation.min.css';
-import 'swiper/modules/pagination/pagination.min.css';
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
-import 'swiper/swiper.min.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { AnimatedContentMemo } from '../../components/Animated-Content';
 import consult from '../../images/financial-consulting.json';
 import payment from '../../images/secure-card-payment.json';

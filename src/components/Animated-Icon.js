@@ -17,10 +17,15 @@ const AnimatedIcon = ({ loop, iconWidth, iconHeight, animationData }) => {
 
       setAnimation(animationItem);
     }
-  }, []);
+  }, [animationData, loop]);
 
   return (
-    <LottieIcon ref={ref} iconWidth={iconWidth} iconHeight={iconHeight}></LottieIcon>
+    <LottieIcon
+      ref={ref}
+      onClick={() => console.log(animation.autoplay)}
+      iconWidth={iconWidth}
+      iconHeight={iconHeight}
+    ></LottieIcon>
   );
 };
 

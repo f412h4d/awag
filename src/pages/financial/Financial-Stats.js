@@ -12,7 +12,7 @@ const Stats = () => {
 
       <StatsCards>
         <StatCard>
-          <img src={coronavirus}></img>
+          <img alt='corona virus' src={coronavirus}></img>
 
           <StatNum>150</StatNum>
 
@@ -20,7 +20,7 @@ const Stats = () => {
         </StatCard>
 
         <StatCard>
-          <img src={branch}></img>
+          <img alt='branch' src={branch}></img>
 
           <StatNum>120000</StatNum>
 
@@ -28,7 +28,7 @@ const Stats = () => {
         </StatCard>
 
         <StatCard>
-          <img src={moneyTtransfer}></img>
+          <img alt='money transfer' src={moneyTtransfer}></img>
 
           <StatNum>400000</StatNum>
 
@@ -36,7 +36,7 @@ const Stats = () => {
         </StatCard>
 
         <StatCard>
-          <img src={receipt}></img>
+          <img alt='receipt' src={receipt}></img>
 
           <StatNum>1350000</StatNum>
 

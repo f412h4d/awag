@@ -112,7 +112,12 @@ const Post = () => {
       </aside>
 
       <Footer>
-        <a href='https://twitter.com/' target='_blank' className={styles['name-link']}>
+        <a
+          href='https://twitter.com/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className={styles['name-link']}
+        >
           By Author
         </a>
       </Footer>

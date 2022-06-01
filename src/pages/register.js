@@ -5,7 +5,7 @@ import girlLogin from '../images/girl-login.json';
 import registerAnimation from '../images/user-registration.json';
 import styles from './register.module.css';
 
-const Register = ({}) => {
+const Register = () => {
   const [slideup, setSlideup] = useState(false);
 
   const [userName, setUserName] = useState('');
@@ -20,6 +20,9 @@ const Register = ({}) => {
       password,
       email,
     });
+
+    // todo remove when api call added
+    console.log(signupInfo);
   };
 
   const signin = () => {
@@ -27,6 +30,9 @@ const Register = ({}) => {
       userName,
       password,
     });
+
+    // todo remove when api call added
+    console.log(loginInfo);
   };
 
   const toggleSlide = () => {

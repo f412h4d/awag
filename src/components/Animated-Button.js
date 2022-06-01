@@ -24,7 +24,7 @@ const AnimatedButton = ({
 
       setAnimation(animationItem);
     }
-  }, []);
+  }, [animationData]);
 
   return (
     <Button
